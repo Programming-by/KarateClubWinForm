@@ -91,6 +91,13 @@ namespace KaratePresentationLayer
 
         }
 
+        private void btnFindBeltRank_Click(object sender, EventArgs e)
+        {
+            FormFindBeltRank frm = new FormFindBeltRank();
+
+            frm.ShowDialog();
+        }
+
 
 
 

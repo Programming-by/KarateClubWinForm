@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormFindBeltRank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFindBeltRank.Designer.cs">
+      <DependentUpon>FormFindBeltRank.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormFindInstructor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormFindBeltRank.resx">
+      <DependentUpon>FormFindBeltRank.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormFindInstructor.resx">
       <DependentUpon>FormFindInstructor.cs</DependentUpon>
     </EmbeddedResource>

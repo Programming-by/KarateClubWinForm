@@ -37,6 +37,7 @@
             this.btnGetAllBeltRanks = new System.Windows.Forms.Button();
             this.btnFindMember = new System.Windows.Forms.Button();
             this.btnFindInstructor = new System.Windows.Forms.Button();
+            this.btnFindBeltRank = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -120,11 +121,22 @@
             this.btnFindInstructor.UseVisualStyleBackColor = true;
             this.btnFindInstructor.Click += new System.EventHandler(this.btnFindInstructor_Click);
             // 
+            // btnFindBeltRank
+            // 
+            this.btnFindBeltRank.Location = new System.Drawing.Point(531, 416);
+            this.btnFindBeltRank.Name = "btnFindBeltRank";
+            this.btnFindBeltRank.Size = new System.Drawing.Size(228, 51);
+            this.btnFindBeltRank.TabIndex = 8;
+            this.btnFindBeltRank.Text = "Find Belt Rank";
+            this.btnFindBeltRank.UseVisualStyleBackColor = true;
+            this.btnFindBeltRank.Click += new System.EventHandler(this.btnFindBeltRank_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1483, 537);
+            this.Controls.Add(this.btnFindBeltRank);
             this.Controls.Add(this.btnFindInstructor);
             this.Controls.Add(this.btnFindMember);
             this.Controls.Add(this.btnGetAllBeltRanks);
@@ -150,6 +162,7 @@
         private System.Windows.Forms.Button btnGetAllBeltRanks;
         private System.Windows.Forms.Button btnFindMember;
         private System.Windows.Forms.Button btnFindInstructor;
+        private System.Windows.Forms.Button btnFindBeltRank;
     }
 }
 
