@@ -16,7 +16,11 @@ namespace KaratePresentationLayer
         public FormMain()
         {
             InitializeComponent();
+
+
         }
+
+
 
         private void _LoadMembersData()
         {
@@ -25,7 +29,7 @@ namespace KaratePresentationLayer
 
         private void _LoadInstructorsData()
         {
-            dgvAllData.DataSource = clsBeltRank.GetAllBeltRanks();
+            dgvAllData.DataSource = clsInstructor.GetAllInstructors();
         }
 
         private void _LoadPaymentsData()
@@ -35,7 +39,7 @@ namespace KaratePresentationLayer
 
         private void _LoadSubscriptionPeriodssData()
         {
-            dgvAllData.DataSource = 
+            dgvAllData.DataSource = clsSubscriptionPeriod.GetAllSubscriptionPeriods(); 
         }
 
         private void _LoadBeltRanksData()
@@ -68,5 +72,50 @@ namespace KaratePresentationLayer
         {
             _LoadSubscriptionPeriodssData();
         }
+
+
+        private void btnFindMember_Click(object sender, EventArgs e)
+        {
+            FormFindMember frm = new FormFindMember();
+
+            frm.ShowDialog();
+
+
+        }
+
+        private void btnFindInstructor_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+
+        /*
+        Name
+        Address
+        ContactInfo
+
+        EmergencyContactInfo
+        LastBeltRank
+        IsActive
+
+        Qualifications
+
+        StartDate
+        EndDate
+        Fees
+
+        Amount
+        Date
+
+        RankName
+        TestFees
+
+        Result
+        Date
+        */
+
     }
 }
