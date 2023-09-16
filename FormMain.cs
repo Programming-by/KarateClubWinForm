@@ -85,6 +85,9 @@ namespace KaratePresentationLayer
 
         private void btnFindInstructor_Click(object sender, EventArgs e)
         {
+            FormFindInstructor frm = new FormFindInstructor();
+
+            frm.ShowDialog();
 
         }
 
