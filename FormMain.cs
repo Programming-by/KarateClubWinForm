@@ -106,6 +106,13 @@ namespace KaratePresentationLayer
 
         }
 
+        private void btnSubscriptionPeriod_Click(object sender, EventArgs e)
+        {
+            FormFindSubscriptionPeriod frm = new FormFindSubscriptionPeriod();
+
+            frm.ShowDialog();
+        }
+
 
 
 

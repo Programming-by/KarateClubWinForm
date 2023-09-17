@@ -39,6 +39,7 @@
             this.btnFindInstructor = new System.Windows.Forms.Button();
             this.btnFindBeltRank = new System.Windows.Forms.Button();
             this.btnFindPayments = new System.Windows.Forms.Button();
+            this.btnSubscriptionPeriod = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -138,15 +139,26 @@
             this.btnFindPayments.Name = "btnFindPayments";
             this.btnFindPayments.Size = new System.Drawing.Size(228, 51);
             this.btnFindPayments.TabIndex = 9;
-            this.btnFindPayments.Text = "Find Payments";
+            this.btnFindPayments.Text = "Find Payment";
             this.btnFindPayments.UseVisualStyleBackColor = true;
             this.btnFindPayments.Click += new System.EventHandler(this.btnFindPayments_Click);
+            // 
+            // btnSubscriptionPeriod
+            // 
+            this.btnSubscriptionPeriod.Location = new System.Drawing.Point(1025, 416);
+            this.btnSubscriptionPeriod.Name = "btnSubscriptionPeriod";
+            this.btnSubscriptionPeriod.Size = new System.Drawing.Size(228, 51);
+            this.btnSubscriptionPeriod.TabIndex = 10;
+            this.btnSubscriptionPeriod.Text = "Find Subscription Period";
+            this.btnSubscriptionPeriod.UseVisualStyleBackColor = true;
+            this.btnSubscriptionPeriod.Click += new System.EventHandler(this.btnSubscriptionPeriod_Click);
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1483, 537);
+            this.Controls.Add(this.btnSubscriptionPeriod);
             this.Controls.Add(this.btnFindPayments);
             this.Controls.Add(this.btnFindBeltRank);
             this.Controls.Add(this.btnFindInstructor);
@@ -176,6 +188,7 @@
         private System.Windows.Forms.Button btnFindInstructor;
         private System.Windows.Forms.Button btnFindBeltRank;
         private System.Windows.Forms.Button btnFindPayments;
+        private System.Windows.Forms.Button btnSubscriptionPeriod;
     }
 }
 
