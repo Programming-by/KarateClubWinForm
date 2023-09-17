@@ -40,14 +40,21 @@
             this.btnFindBeltRank = new System.Windows.Forms.Button();
             this.btnFindPayments = new System.Windows.Forms.Button();
             this.btnSubscriptionPeriod = new System.Windows.Forms.Button();
+            this.btnAddMember = new System.Windows.Forms.Button();
+            this.btnAddInstructor = new System.Windows.Forms.Button();
+            this.btnAddBeltRank = new System.Windows.Forms.Button();
+            this.btnAddPayment = new System.Windows.Forms.Button();
+            this.btnAddSubscriptionPeriod = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllData)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvAllData
             // 
+            this.dgvAllData.AllowUserToDeleteRows = false;
             this.dgvAllData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAllData.Location = new System.Drawing.Point(273, 29);
             this.dgvAllData.Name = "dgvAllData";
+            this.dgvAllData.ReadOnly = true;
             this.dgvAllData.RowHeadersWidth = 51;
             this.dgvAllData.RowTemplate.Height = 24;
             this.dgvAllData.Size = new System.Drawing.Size(1126, 369);
@@ -153,11 +160,64 @@
             this.btnSubscriptionPeriod.UseVisualStyleBackColor = true;
             this.btnSubscriptionPeriod.Click += new System.EventHandler(this.btnSubscriptionPeriod_Click);
             // 
+            // btnAddMember
+            // 
+            this.btnAddMember.Location = new System.Drawing.Point(12, 487);
+            this.btnAddMember.Name = "btnAddMember";
+            this.btnAddMember.Size = new System.Drawing.Size(228, 51);
+            this.btnAddMember.TabIndex = 11;
+            this.btnAddMember.Text = "Add Member";
+            this.btnAddMember.UseVisualStyleBackColor = true;
+            this.btnAddMember.Click += new System.EventHandler(this.btnAddMember_Click);
+            // 
+            // btnAddInstructor
+            // 
+            this.btnAddInstructor.Location = new System.Drawing.Point(273, 487);
+            this.btnAddInstructor.Name = "btnAddInstructor";
+            this.btnAddInstructor.Size = new System.Drawing.Size(228, 51);
+            this.btnAddInstructor.TabIndex = 12;
+            this.btnAddInstructor.Text = "Add Instructor";
+            this.btnAddInstructor.UseVisualStyleBackColor = true;
+            this.btnAddInstructor.Click += new System.EventHandler(this.btnAddInstructor_Click);
+            // 
+            // btnAddBeltRank
+            // 
+            this.btnAddBeltRank.Location = new System.Drawing.Point(531, 487);
+            this.btnAddBeltRank.Name = "btnAddBeltRank";
+            this.btnAddBeltRank.Size = new System.Drawing.Size(228, 51);
+            this.btnAddBeltRank.TabIndex = 13;
+            this.btnAddBeltRank.Text = "Add Belt Rank";
+            this.btnAddBeltRank.UseVisualStyleBackColor = true;
+            // 
+            // btnAddPayment
+            // 
+            this.btnAddPayment.Location = new System.Drawing.Point(791, 487);
+            this.btnAddPayment.Name = "btnAddPayment";
+            this.btnAddPayment.Size = new System.Drawing.Size(228, 51);
+            this.btnAddPayment.TabIndex = 14;
+            this.btnAddPayment.Text = "Add Payment";
+            this.btnAddPayment.UseVisualStyleBackColor = true;
+            this.btnAddPayment.Click += new System.EventHandler(this.btnAddPayment_Click);
+            // 
+            // btnAddSubscriptionPeriod
+            // 
+            this.btnAddSubscriptionPeriod.Location = new System.Drawing.Point(1025, 487);
+            this.btnAddSubscriptionPeriod.Name = "btnAddSubscriptionPeriod";
+            this.btnAddSubscriptionPeriod.Size = new System.Drawing.Size(228, 51);
+            this.btnAddSubscriptionPeriod.TabIndex = 15;
+            this.btnAddSubscriptionPeriod.Text = "Add Subscription Period";
+            this.btnAddSubscriptionPeriod.UseVisualStyleBackColor = true;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1483, 537);
+            this.Controls.Add(this.btnAddSubscriptionPeriod);
+            this.Controls.Add(this.btnAddPayment);
+            this.Controls.Add(this.btnAddBeltRank);
+            this.Controls.Add(this.btnAddInstructor);
+            this.Controls.Add(this.btnAddMember);
             this.Controls.Add(this.btnSubscriptionPeriod);
             this.Controls.Add(this.btnFindPayments);
             this.Controls.Add(this.btnFindBeltRank);
@@ -189,6 +249,11 @@
         private System.Windows.Forms.Button btnFindBeltRank;
         private System.Windows.Forms.Button btnFindPayments;
         private System.Windows.Forms.Button btnSubscriptionPeriod;
+        private System.Windows.Forms.Button btnAddMember;
+        private System.Windows.Forms.Button btnAddInstructor;
+        private System.Windows.Forms.Button btnAddBeltRank;
+        private System.Windows.Forms.Button btnAddPayment;
+        private System.Windows.Forms.Button btnAddSubscriptionPeriod;
     }
 }
 

@@ -113,6 +113,35 @@ namespace KaratePresentationLayer
             frm.ShowDialog();
         }
 
+        private void btnAddMember_Click(object sender, EventArgs e)
+        {
+           FormAddEditMembers frm  = new FormAddEditMembers(-1);
+
+
+            frm.ShowDialog();
+
+            _LoadMembersData();
+
+        }
+
+        private void btnAddInstructor_Click(object sender, EventArgs e)
+        {
+            FormAddEditInstructors frm = new FormAddEditInstructors(-1);
+
+            frm.ShowDialog();
+
+            _LoadInstructorsData();
+        }
+
+        private void btnAddPayment_Click(object sender, EventArgs e)
+        {
+            FormAddEditPayments frm = new FormAddEditPayments(-1);
+
+            frm.ShowDialog();
+
+            _LoadPaymentsData();
+        }
+
 
 
 

@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAddEditInstructors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddEditInstructors.Designer.cs">
+      <DependentUpon>FormAddEditInstructors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddEditMembers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddEditMembers.Designer.cs">
+      <DependentUpon>FormAddEditMembers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddEditPayments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddEditPayments.Designer.cs">
+      <DependentUpon>FormAddEditPayments.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormFindBeltRank.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +102,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAddEditInstructors.resx">
+      <DependentUpon>FormAddEditInstructors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddEditMembers.resx">
+      <DependentUpon>FormAddEditMembers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddEditPayments.resx">
+      <DependentUpon>FormAddEditPayments.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormFindBeltRank.resx">
       <DependentUpon>FormFindBeltRank.cs</DependentUpon>
     </EmbeddedResource>
