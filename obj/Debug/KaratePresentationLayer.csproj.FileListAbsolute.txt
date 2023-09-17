@@ -33,3 +33,4 @@ C:\Users\User\Source\Repos\KarateClubPresentationLayer\obj\Debug\KaratePresentat
 C:\Users\User\Source\Repos\KarateClubPresentationLayer\obj\Debug\KaratePresentationLayer.FormFindMember.resources
 C:\Users\User\Source\Repos\KarateClubPresentationLayer\obj\Debug\KaratePresentationLayer.FormFindInstructor.resources
 C:\Users\User\Source\Repos\KarateClubPresentationLayer\obj\Debug\KaratePresentationLayer.FormFindBeltRank.resources
+C:\Users\User\Source\Repos\KarateClubPresentationLayer\obj\Debug\KaratePresentationLayer.FormFindPayment.resources

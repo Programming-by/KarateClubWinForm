@@ -98,6 +98,14 @@ namespace KaratePresentationLayer
             frm.ShowDialog();
         }
 
+        private void btnFindPayments_Click(object sender, EventArgs e)
+        {
+            FormFindPayment frm = new FormFindPayment();
+
+            frm.ShowDialog();
+
+        }
+
 
 
 

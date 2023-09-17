@@ -38,6 +38,7 @@
             this.btnFindMember = new System.Windows.Forms.Button();
             this.btnFindInstructor = new System.Windows.Forms.Button();
             this.btnFindBeltRank = new System.Windows.Forms.Button();
+            this.btnFindPayments = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -131,11 +132,22 @@
             this.btnFindBeltRank.UseVisualStyleBackColor = true;
             this.btnFindBeltRank.Click += new System.EventHandler(this.btnFindBeltRank_Click);
             // 
+            // btnFindPayments
+            // 
+            this.btnFindPayments.Location = new System.Drawing.Point(791, 416);
+            this.btnFindPayments.Name = "btnFindPayments";
+            this.btnFindPayments.Size = new System.Drawing.Size(228, 51);
+            this.btnFindPayments.TabIndex = 9;
+            this.btnFindPayments.Text = "Find Payments";
+            this.btnFindPayments.UseVisualStyleBackColor = true;
+            this.btnFindPayments.Click += new System.EventHandler(this.btnFindPayments_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1483, 537);
+            this.Controls.Add(this.btnFindPayments);
             this.Controls.Add(this.btnFindBeltRank);
             this.Controls.Add(this.btnFindInstructor);
             this.Controls.Add(this.btnFindMember);
@@ -163,6 +175,7 @@
         private System.Windows.Forms.Button btnFindMember;
         private System.Windows.Forms.Button btnFindInstructor;
         private System.Windows.Forms.Button btnFindBeltRank;
+        private System.Windows.Forms.Button btnFindPayments;
     }
 }
 

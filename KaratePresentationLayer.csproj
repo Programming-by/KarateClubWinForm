@@ -58,6 +58,12 @@
     <Compile Include="FormFindInstructor.Designer.cs">
       <DependentUpon>FormFindInstructor.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormFindPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFindPayment.Designer.cs">
+      <DependentUpon>FormFindPayment.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormFindMember.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormFindInstructor.resx">
       <DependentUpon>FormFindInstructor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFindPayment.resx">
+      <DependentUpon>FormFindPayment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormFindMember.resx">
       <DependentUpon>FormFindMember.cs</DependentUpon>
