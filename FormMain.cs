@@ -185,5 +185,14 @@ namespace KaratePresentationLayer
 
             _LoadInstructorsData();
         }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            FormAddEditPayments frm = new FormAddEditPayments((int)dgvAllData.CurrentRow.Cells[0].Value);
+
+            frm.ShowDialog();
+
+            _LoadPaymentsData();
+        }
     }
 }
