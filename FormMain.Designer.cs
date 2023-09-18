@@ -291,6 +291,7 @@
             this.btnUpdatePayment.TabIndex = 19;
             this.btnUpdatePayment.Text = "Update Payment";
             this.btnUpdatePayment.UseVisualStyleBackColor = true;
+            this.btnUpdatePayment.Click += new System.EventHandler(this.btnUpdatePayment_Click);
             // 
             // btnUpdateSubscriptionPeriod
             // 
