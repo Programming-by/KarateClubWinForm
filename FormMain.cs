@@ -19,7 +19,9 @@ namespace KaratePresentationLayer
 
 
         }
-
+        // Belt Test Crud
+        // Update , Delete 
+        // Update , Delete on Menu Strips
 
 
         private void _LoadMembersData()
@@ -140,6 +142,15 @@ namespace KaratePresentationLayer
             frm.ShowDialog();
 
             _LoadPaymentsData();
+        }
+
+        private void btnAddSubscriptionPeriod_Click(object sender, EventArgs e)
+        {
+            FormAddEditSubscriptionPeriods frm = new FormAddEditSubscriptionPeriods(-1);
+
+            frm.ShowDialog();
+
+            _LoadSubscriptionPeriodssData();
         }
 
 

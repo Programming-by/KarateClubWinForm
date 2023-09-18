@@ -207,6 +207,7 @@
             this.btnAddSubscriptionPeriod.TabIndex = 15;
             this.btnAddSubscriptionPeriod.Text = "Add Subscription Period";
             this.btnAddSubscriptionPeriod.UseVisualStyleBackColor = true;
+            this.btnAddSubscriptionPeriod.Click += new System.EventHandler(this.btnAddSubscriptionPeriod_Click);
             // 
             // FormMain
             // 

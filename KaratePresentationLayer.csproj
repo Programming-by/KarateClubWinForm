@@ -64,6 +64,12 @@
     <Compile Include="FormAddEditPayments.Designer.cs">
       <DependentUpon>FormAddEditPayments.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAddEditSubscriptionPeriods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddEditSubscriptionPeriods.Designer.cs">
+      <DependentUpon>FormAddEditSubscriptionPeriods.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormFindBeltRank.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAddEditPayments.resx">
       <DependentUpon>FormAddEditPayments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddEditSubscriptionPeriods.resx">
+      <DependentUpon>FormAddEditSubscriptionPeriods.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormFindBeltRank.resx">
       <DependentUpon>FormFindBeltRank.cs</DependentUpon>
