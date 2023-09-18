@@ -63,6 +63,7 @@
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.btnDeleteInstructor = new System.Windows.Forms.Button();
+            this.btnDeleteSubscriptionPeriod = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllData)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
@@ -383,11 +384,22 @@
             this.btnDeleteInstructor.UseVisualStyleBackColor = true;
             this.btnDeleteInstructor.Click += new System.EventHandler(this.btnDeleteInstructor_Click);
             // 
+            // btnDeleteSubscriptionPeriod
+            // 
+            this.btnDeleteSubscriptionPeriod.Location = new System.Drawing.Point(1025, 636);
+            this.btnDeleteSubscriptionPeriod.Name = "btnDeleteSubscriptionPeriod";
+            this.btnDeleteSubscriptionPeriod.Size = new System.Drawing.Size(228, 51);
+            this.btnDeleteSubscriptionPeriod.TabIndex = 22;
+            this.btnDeleteSubscriptionPeriod.Text = "Delete Subscription Period";
+            this.btnDeleteSubscriptionPeriod.UseVisualStyleBackColor = true;
+            this.btnDeleteSubscriptionPeriod.Click += new System.EventHandler(this.btnDeleteSubscriptionPeriod_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1483, 750);
+            this.Controls.Add(this.btnDeleteSubscriptionPeriod);
             this.Controls.Add(this.btnDeleteInstructor);
             this.Controls.Add(this.btnUpdateSubscriptionPeriod);
             this.Controls.Add(this.btnUpdatePayment);
@@ -456,6 +468,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
         private System.Windows.Forms.Button btnDeleteInstructor;
+        private System.Windows.Forms.Button btnDeleteSubscriptionPeriod;
     }
 }
 

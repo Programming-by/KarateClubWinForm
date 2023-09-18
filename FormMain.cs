@@ -299,17 +299,25 @@ namespace KaratePresentationLayer
 
         private void btnDeleteMember_Click(object sender, EventArgs e)
         {
-
+            //delete sub period and payment before delete member
         }
 
         private void btnDeleteInstructor_Click(object sender, EventArgs e)
         {
-            FormDelete frm = new FormDelete();
+            FormDeleteInstructors frm = new FormDeleteInstructors();
 
             frm.ShowDialog();
 
             _LoadInstructorsData();
 
+        }
+
+        private void btnDeleteSubscriptionPeriod_Click(object sender, EventArgs e)
+        {
+
+            FormDeleteSubscriptionPeriod frm = new FormDeleteSubscriptionPeriod();
+            frm.ShowDialog();
+            _LoadSubscriptionPeriodssData();
         }
     }
 }

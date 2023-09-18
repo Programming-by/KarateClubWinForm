@@ -1,6 +1,6 @@
 ﻿namespace KaratePresentationLayer
 {
-    partial class FormDelete
+    partial class FormDeleteInstructors
     {
         /// <summary>
         /// Required designer variable.

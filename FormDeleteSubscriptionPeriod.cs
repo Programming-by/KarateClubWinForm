@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace KaratePresentationLayer
 {
-    public partial class FormDelete : Form
+    public partial class FormDeleteSubscriptionPeriod : Form
     {
-        clsPeople _Person;
-        clsInstructor _Instructor;
-        public FormDelete()
+        clsSubscriptionPeriod _SubscriptionPeriod;
+        clsMember _Member;
+        public FormDeleteSubscriptionPeriod()
         {
             InitializeComponent();
         }
@@ -27,39 +27,31 @@ namespace KaratePresentationLayer
 
         private void btnFind_Click(object sender, EventArgs e)
         {
+            _SubscriptionPeriod = clsSubscriptionPeriod.Find(Convert.ToInt32(txtPersonID.Text));
 
-            _Person = clsPeople.Find(Convert.ToInt32(txtPersonID.Text));
-            _Instructor = clsInstructor.Find(Convert.ToInt32(txtPersonID.Text));
-
-            if (_Person == null || _Instructor == null)
+            if ( _SubscriptionPeriod == null)
             {
-                MessageBox.Show("this form will be closed because No Instructor with ID  = " + txtPersonID.Text);
+                MessageBox.Show("this form will be closed because No SubscriptionPeriod with ID  = " + txtPersonID.Text);
 
                 this.Close();
 
                 return;
-
             }
+            _Member = clsMember.Find(Convert.ToInt32(txtPersonID.Text));
 
             lblIsFound.Text = "Found";
             lblIsFound.Visible = true;
             btnClose.Visible = true;
             btnDelete.Visible = true;
-
-
-
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure you want to delete Instructor [" + txtPersonID.Text + "]", "Confirm Delete", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            if (MessageBox.Show("Are you sure you want to delete Subscription Period [" + txtPersonID.Text + "]", "Confirm Delete", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
-                if (clsInstructor.Delete(Convert.ToInt32(txtPersonID.Text)))
+                if (clsSubscriptionPeriod.Delete(Convert.ToInt32(_Member.MemberID)))
                 {
-                    if (clsPeople.Delete(Convert.ToInt32(txtPersonID.Text)))
-                    {
-                        MessageBox.Show("Instructor Deleted Successfully.");
-                    }
+                        MessageBox.Show("SubscriptionPeriod Deleted Successfully.");
                 }
             }
         }

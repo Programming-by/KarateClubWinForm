@@ -70,11 +70,17 @@
     <Compile Include="FormAddEditSubscriptionPeriods.Designer.cs">
       <DependentUpon>FormAddEditSubscriptionPeriods.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDelete.cs">
+    <Compile Include="FormDeleteInstructors.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDelete.Designer.cs">
-      <DependentUpon>FormDelete.cs</DependentUpon>
+    <Compile Include="FormDeleteInstructors.Designer.cs">
+      <DependentUpon>FormDeleteInstructors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDeleteSubscriptionPeriod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDeleteSubscriptionPeriod.Designer.cs">
+      <DependentUpon>FormDeleteSubscriptionPeriod.cs</DependentUpon>
     </Compile>
     <Compile Include="FormFindBeltRank.cs">
       <SubType>Form</SubType>
@@ -150,8 +156,11 @@
     <EmbeddedResource Include="FormAddEditSubscriptionPeriods.resx">
       <DependentUpon>FormAddEditSubscriptionPeriods.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormDelete.resx">
-      <DependentUpon>FormDelete.cs</DependentUpon>
+    <EmbeddedResource Include="FormDeleteInstructors.resx">
+      <DependentUpon>FormDeleteInstructors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDeleteSubscriptionPeriod.resx">
+      <DependentUpon>FormDeleteSubscriptionPeriod.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormFindBeltRank.resx">
       <DependentUpon>FormFindBeltRank.cs</DependentUpon>
