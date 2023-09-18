@@ -22,7 +22,7 @@ namespace KaratePresentationLayer
         }
         // Belt Test Crud
         // Update , Delete 
-        // Update , Delete on Menu Strips
+        // Delete on Menu Strips
 
 
         private void _LoadMembersData()
@@ -202,6 +202,38 @@ namespace KaratePresentationLayer
             frm.ShowDialog();
 
             _LoadSubscriptionPeriodssData();
+
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+         
+
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to delete Instructor [" + dgvAllData.CurrentRow.Cells[0].Value + "]", "Confirm Delete", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                if (clsInstructor.Delete((int)dgvAllData.CurrentRow.Cells[0].Value))
+                {
+                    if (clsPeople.Delete((int)dgvAllData.CurrentRow.Cells[0].Value))
+                    {
+                        MessageBox.Show("Instructor Deleted Successfully.");
+                        _LoadInstructorsData();
+                    }
+                }
+            }
+
+        }
+
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem6_Click(object sender, EventArgs e)
+        {
 
         }
     }
