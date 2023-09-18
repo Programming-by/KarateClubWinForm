@@ -21,8 +21,8 @@ namespace KaratePresentationLayer
 
         }
         // Belt Test Crud
-        // Update , Delete 
-        // Delete on Menu Strips
+        // Update , Delete Forms 
+        // Delete Payment , Member ,Subscription Period on Menu Strips
 
 
         private void _LoadMembersData()
@@ -229,11 +229,20 @@ namespace KaratePresentationLayer
 
         private void toolStripMenuItem4_Click(object sender, EventArgs e)
         {
-
+           
         }
 
         private void toolStripMenuItem6_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("Are you sure you want to delete Subscription Period [" + dgvAllData.CurrentRow.Cells[0].Value + "]", "Confirm Delete", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                if (clsSubscriptionPeriod.Delete((int)dgvAllData.CurrentRow.Cells[0].Value))
+                {
+                    MessageBox.Show("Subscription Period Deleted Successfully.");
+                    _LoadSubscriptionPeriodssData();
+
+                }
+            }
 
         }
     }
