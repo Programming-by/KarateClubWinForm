@@ -47,7 +47,7 @@
             this.lblName = new System.Windows.Forms.Label();
             this.lblMode = new System.Windows.Forms.Label();
             this.txtPersonID = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblIsFound = new System.Windows.Forms.Label();
             this.btnFind = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericLastBeltRank)).BeginInit();
             this.SuspendLayout();
@@ -250,16 +250,16 @@
             this.txtPersonID.Size = new System.Drawing.Size(298, 46);
             this.txtPersonID.TabIndex = 64;
             // 
-            // label7
+            // lblIsFound
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(971, 73);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(270, 46);
-            this.label7.TabIndex = 65;
-            this.label7.Text = "IsFoundOrNot";
-            this.label7.Visible = false;
+            this.lblIsFound.AutoSize = true;
+            this.lblIsFound.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIsFound.Location = new System.Drawing.Point(971, 73);
+            this.lblIsFound.Name = "lblIsFound";
+            this.lblIsFound.Size = new System.Drawing.Size(270, 46);
+            this.lblIsFound.TabIndex = 65;
+            this.lblIsFound.Text = "IsFoundOrNot";
+            this.lblIsFound.Visible = false;
             // 
             // btnFind
             // 
@@ -277,7 +277,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1292, 704);
             this.Controls.Add(this.btnFind);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lblIsFound);
             this.Controls.Add(this.txtPersonID);
             this.Controls.Add(this.numericLastBeltRank);
             this.Controls.Add(this.rbNotActive);
@@ -327,7 +327,7 @@
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblMode;
         private System.Windows.Forms.TextBox txtPersonID;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblIsFound;
         private System.Windows.Forms.Button btnFind;
     }
 }

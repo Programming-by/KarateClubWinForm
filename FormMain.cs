@@ -272,5 +272,12 @@ namespace KaratePresentationLayer
 
             frm.ShowDialog();
         }
+
+        private void btnUpdateInstructor_Click(object sender, EventArgs e)
+        {
+             FormUpdateInstructor frm = new FormUpdateInstructor();
+
+            frm.ShowDialog();
+        }
     }
 }

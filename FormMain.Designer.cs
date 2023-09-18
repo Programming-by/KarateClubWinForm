@@ -272,6 +272,7 @@
             this.btnUpdateInstructor.TabIndex = 17;
             this.btnUpdateInstructor.Text = "Update Instructor";
             this.btnUpdateInstructor.UseVisualStyleBackColor = true;
+            this.btnUpdateInstructor.Click += new System.EventHandler(this.btnUpdateInstructor_Click);
             // 
             // btnBeltRank
             // 
