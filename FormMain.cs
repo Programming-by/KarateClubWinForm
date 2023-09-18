@@ -22,7 +22,7 @@ namespace KaratePresentationLayer
         }
         // Belt Test Crud
         // Update , Delete Forms 
-        // Delete Payment , Member ,Subscription Period on Menu Strips
+        // Delete Payment , Member on Menu Strips
 
 
         private void _LoadMembersData()
@@ -229,7 +229,18 @@ namespace KaratePresentationLayer
 
         private void toolStripMenuItem4_Click(object sender, EventArgs e)
         {
-           
+            if (MessageBox.Show("Are you sure you want to delete Payment [" + dgvAllData.CurrentRow.Cells[0].Value + "]", "Confirm Delete", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                toolStripMenuItem6_Click(sender, e);
+                
+                    if (clsPayment.Delete((int)dgvAllData.CurrentRow.Cells[0].Value))
+                    {
+                        MessageBox.Show("Payment Deleted Successfully.");
+                        _LoadPaymentsData();
+
+                    }
+                
+            }
         }
 
         private void toolStripMenuItem6_Click(object sender, EventArgs e)
