@@ -262,6 +262,7 @@
             this.btnUpdateMember.TabIndex = 16;
             this.btnUpdateMember.Text = "Update Member";
             this.btnUpdateMember.UseVisualStyleBackColor = true;
+            this.btnUpdateMember.Click += new System.EventHandler(this.btnUpdateMember_Click);
             // 
             // btnUpdateInstructor
             // 
@@ -352,7 +353,7 @@
             this.toolStripMenuItem5,
             this.toolStripMenuItem6});
             this.contextMenuStrip4.Name = "contextMenuStrip1";
-            this.contextMenuStrip4.Size = new System.Drawing.Size(211, 80);
+            this.contextMenuStrip4.Size = new System.Drawing.Size(123, 52);
             // 
             // toolStripMenuItem5
             // 

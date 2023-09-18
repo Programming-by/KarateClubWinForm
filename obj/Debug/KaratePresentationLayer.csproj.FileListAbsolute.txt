@@ -39,3 +39,4 @@ C:\Users\User\Source\Repos\KarateClubPresentationLayer\obj\Debug\KaratePresentat
 C:\Users\User\Source\Repos\KarateClubPresentationLayer\obj\Debug\KaratePresentationLayer.FormAddEditInstructors.resources
 C:\Users\User\Source\Repos\KarateClubPresentationLayer\obj\Debug\KaratePresentationLayer.FormAddEditPayments.resources
 C:\Users\User\Source\Repos\KarateClubPresentationLayer\obj\Debug\KaratePresentationLayer.FormAddEditSubscriptionPeriods.resources
+C:\Users\User\Source\Repos\KarateClubPresentationLayer\obj\Debug\KaratePresentationLayer.FormUpdateMember.resources

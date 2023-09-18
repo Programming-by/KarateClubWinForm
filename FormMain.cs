@@ -22,8 +22,6 @@ namespace KaratePresentationLayer
         }
         // Belt Test Crud
         // Update , Delete Forms 
-        // Delete  Member on Menu Strips
-
 
         private void _LoadMembersData()
         {
@@ -266,6 +264,13 @@ namespace KaratePresentationLayer
                 }
             }
 
+        }
+
+        private void btnUpdateMember_Click(object sender, EventArgs e)
+        {
+            FormUpdateMember frm = new FormUpdateMember();
+
+            frm.ShowDialog();
         }
     }
 }
