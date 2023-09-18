@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.components = new System.ComponentModel.Container();
             this.dgvAllData = new System.Windows.Forms.DataGridView();
             this.btnGetAllMembers = new System.Windows.Forms.Button();
             this.btnGetAllInstructors = new System.Windows.Forms.Button();
@@ -45,13 +45,23 @@
             this.btnAddBeltRank = new System.Windows.Forms.Button();
             this.btnAddPayment = new System.Windows.Forms.Button();
             this.btnAddSubscriptionPeriod = new System.Windows.Forms.Button();
+            this.btnUpdateMember = new System.Windows.Forms.Button();
+            this.btnUpdateInstructor = new System.Windows.Forms.Button();
+            this.btnBeltRank = new System.Windows.Forms.Button();
+            this.btnUpdatePayment = new System.Windows.Forms.Button();
+            this.btnUpdateSubscriptionPeriod = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllData)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvAllData
             // 
             this.dgvAllData.AllowUserToDeleteRows = false;
             this.dgvAllData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAllData.ContextMenuStrip = this.contextMenuStrip1;
             this.dgvAllData.Location = new System.Drawing.Point(273, 29);
             this.dgvAllData.Name = "dgvAllData";
             this.dgvAllData.ReadOnly = true;
@@ -209,11 +219,83 @@
             this.btnAddSubscriptionPeriod.UseVisualStyleBackColor = true;
             this.btnAddSubscriptionPeriod.Click += new System.EventHandler(this.btnAddSubscriptionPeriod_Click);
             // 
+            // btnUpdateMember
+            // 
+            this.btnUpdateMember.Location = new System.Drawing.Point(12, 558);
+            this.btnUpdateMember.Name = "btnUpdateMember";
+            this.btnUpdateMember.Size = new System.Drawing.Size(228, 51);
+            this.btnUpdateMember.TabIndex = 16;
+            this.btnUpdateMember.Text = "Update Member";
+            this.btnUpdateMember.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdateInstructor
+            // 
+            this.btnUpdateInstructor.Location = new System.Drawing.Point(273, 558);
+            this.btnUpdateInstructor.Name = "btnUpdateInstructor";
+            this.btnUpdateInstructor.Size = new System.Drawing.Size(228, 51);
+            this.btnUpdateInstructor.TabIndex = 17;
+            this.btnUpdateInstructor.Text = "Update Instructor";
+            this.btnUpdateInstructor.UseVisualStyleBackColor = true;
+            // 
+            // btnBeltRank
+            // 
+            this.btnBeltRank.Location = new System.Drawing.Point(531, 558);
+            this.btnBeltRank.Name = "btnBeltRank";
+            this.btnBeltRank.Size = new System.Drawing.Size(228, 51);
+            this.btnBeltRank.TabIndex = 18;
+            this.btnBeltRank.Text = "Update Belt Rank";
+            this.btnBeltRank.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdatePayment
+            // 
+            this.btnUpdatePayment.Location = new System.Drawing.Point(791, 558);
+            this.btnUpdatePayment.Name = "btnUpdatePayment";
+            this.btnUpdatePayment.Size = new System.Drawing.Size(228, 51);
+            this.btnUpdatePayment.TabIndex = 19;
+            this.btnUpdatePayment.Text = "Update Payment";
+            this.btnUpdatePayment.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdateSubscriptionPeriod
+            // 
+            this.btnUpdateSubscriptionPeriod.Location = new System.Drawing.Point(1025, 558);
+            this.btnUpdateSubscriptionPeriod.Name = "btnUpdateSubscriptionPeriod";
+            this.btnUpdateSubscriptionPeriod.Size = new System.Drawing.Size(228, 51);
+            this.btnUpdateSubscriptionPeriod.TabIndex = 20;
+            this.btnUpdateSubscriptionPeriod.Text = "Update Subscription Period";
+            this.btnUpdateSubscriptionPeriod.UseVisualStyleBackColor = true;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editToolStripMenuItem,
+            this.deleteToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 80);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1483, 537);
+            this.ClientSize = new System.Drawing.Size(1483, 635);
+            this.Controls.Add(this.btnUpdateSubscriptionPeriod);
+            this.Controls.Add(this.btnUpdatePayment);
+            this.Controls.Add(this.btnBeltRank);
+            this.Controls.Add(this.btnUpdateInstructor);
+            this.Controls.Add(this.btnUpdateMember);
             this.Controls.Add(this.btnAddSubscriptionPeriod);
             this.Controls.Add(this.btnAddPayment);
             this.Controls.Add(this.btnAddBeltRank);
@@ -233,12 +315,12 @@
             this.Name = "FormMain";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllData)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.DataGridView dgvAllData;
         private System.Windows.Forms.Button btnGetAllMembers;
         private System.Windows.Forms.Button btnGetAllInstructors;
@@ -255,6 +337,14 @@
         private System.Windows.Forms.Button btnAddBeltRank;
         private System.Windows.Forms.Button btnAddPayment;
         private System.Windows.Forms.Button btnAddSubscriptionPeriod;
+        private System.Windows.Forms.Button btnUpdateMember;
+        private System.Windows.Forms.Button btnUpdateInstructor;
+        private System.Windows.Forms.Button btnBeltRank;
+        private System.Windows.Forms.Button btnUpdatePayment;
+        private System.Windows.Forms.Button btnUpdateSubscriptionPeriod;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
     }
 }
 

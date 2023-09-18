@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -153,34 +154,14 @@ namespace KaratePresentationLayer
             _LoadSubscriptionPeriodssData();
         }
 
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAddEditMembers frm = new FormAddEditMembers((int) dgvAllData.CurrentRow.Cells[0].Value);
 
+            frm.ShowDialog();
 
+            _LoadMembersData();
 
-
-        /*
-        Name
-        Address
-        ContactInfo
-
-        EmergencyContactInfo
-        LastBeltRank
-        IsActive
-
-        Qualifications
-
-        StartDate
-        EndDate
-        Fees
-
-        Amount
-        Date
-
-        RankName
-        TestFees
-
-        Result
-        Date
-        */
-
+        }
     }
 }
