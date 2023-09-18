@@ -327,7 +327,7 @@
             this.toolStripMenuItem3,
             this.toolStripMenuItem4});
             this.contextMenuStrip3.Name = "contextMenuStrip1";
-            this.contextMenuStrip3.Size = new System.Drawing.Size(211, 80);
+            this.contextMenuStrip3.Size = new System.Drawing.Size(123, 52);
             // 
             // toolStripMenuItem3
             // 
@@ -349,13 +349,14 @@
             this.toolStripMenuItem5,
             this.toolStripMenuItem6});
             this.contextMenuStrip4.Name = "contextMenuStrip1";
-            this.contextMenuStrip4.Size = new System.Drawing.Size(123, 52);
+            this.contextMenuStrip4.Size = new System.Drawing.Size(211, 80);
             // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(122, 24);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(210, 24);
             this.toolStripMenuItem5.Text = "Edit";
+            this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
             // 
             // toolStripMenuItem6
             // 

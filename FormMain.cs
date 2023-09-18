@@ -194,5 +194,15 @@ namespace KaratePresentationLayer
 
             _LoadPaymentsData();
         }
+
+        private void toolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+            FormAddEditSubscriptionPeriods frm = new FormAddEditSubscriptionPeriods((int)dgvAllData.CurrentRow.Cells[0].Value);
+
+            frm.ShowDialog();
+
+            _LoadSubscriptionPeriodssData();
+
+        }
     }
 }
