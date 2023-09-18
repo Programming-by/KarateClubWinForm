@@ -53,11 +53,18 @@ namespace KaratePresentationLayer
         private void btnGetAllMembers_Click(object sender, EventArgs e)
         {
             _LoadMembersData();
+
+            dgvAllData.ContextMenuStrip = contextMenuStrip1;
+
         }
 
         private void btnGetAllInstructors_Click(object sender, EventArgs e)
         {
             _LoadInstructorsData();
+
+            dgvAllData.ContextMenuStrip = contextMenuStrip2;
+
+
         }
 
         private void btnGetAllBeltRanks_Click(object sender, EventArgs e)
@@ -69,11 +76,17 @@ namespace KaratePresentationLayer
         {
             _LoadPaymentsData();
 
+            dgvAllData.ContextMenuStrip = contextMenuStrip3;
+
+
         }
 
         private void btnSupscriptionPeriods_Click(object sender, EventArgs e)
         {
             _LoadSubscriptionPeriodssData();
+
+            dgvAllData.ContextMenuStrip = contextMenuStrip4;
+
         }
 
 
@@ -162,6 +175,15 @@ namespace KaratePresentationLayer
 
             _LoadMembersData();
 
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormAddEditInstructors frm = new FormAddEditInstructors((int)dgvAllData.CurrentRow.Cells[0].Value);
+
+            frm.ShowDialog();
+
+            _LoadInstructorsData();
         }
     }
 }
