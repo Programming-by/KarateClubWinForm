@@ -20,9 +20,10 @@ namespace KaratePresentationLayer
 
 
         }
+        
+        
         // Belt Test Crud
-        // Update Subscription Period
-        // , Delete Forms 
+        // Delete Forms 
 
         private void _LoadMembersData()
         {
@@ -286,6 +287,14 @@ namespace KaratePresentationLayer
             FormUpdatePayment frm = new FormUpdatePayment();
 
             frm.ShowDialog();   
+        }
+
+        private void btnUpdateSubscriptionPeriod_Click(object sender, EventArgs e)
+        {
+            FormUpdateSubscriptionPeriod frm = new FormUpdateSubscriptionPeriod();
+
+            frm.ShowDialog();
+
         }
     }
 }

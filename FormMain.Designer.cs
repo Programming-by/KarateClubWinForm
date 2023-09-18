@@ -301,6 +301,7 @@
             this.btnUpdateSubscriptionPeriod.TabIndex = 20;
             this.btnUpdateSubscriptionPeriod.Text = "Update Subscription Period";
             this.btnUpdateSubscriptionPeriod.UseVisualStyleBackColor = true;
+            this.btnUpdateSubscriptionPeriod.Click += new System.EventHandler(this.btnUpdateSubscriptionPeriod_Click);
             // 
             // contextMenuStrip2
             // 

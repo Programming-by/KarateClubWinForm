@@ -66,6 +66,8 @@ namespace KaratePresentationLayer
 
             txtEmergencyContactInfo.Visible = true;
             numericLastBeltRank.Visible = true;
+            rbActive.Visible = true;
+            rbNotActive.Visible = true;
             btnClose.Visible = true;
             btnSave.Visible = true;
 
@@ -126,7 +128,15 @@ namespace KaratePresentationLayer
             _Person.Address = txtAddress.Text;
             _Member.EmergencyContactInfo = txtEmergencyContactInfo.Text;
             _Member.LastBeltRank = Convert.ToInt32(numericLastBeltRank.Value);
-            _Member.IsActive = true;
+            if (rbActive.Checked == true)
+            {
+                _Member.IsActive = true;
+
+            }
+            else
+            {
+              _Member.IsActive = false;
+            }
 
 
             if (_Person.Save())
