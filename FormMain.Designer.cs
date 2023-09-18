@@ -62,6 +62,7 @@
             this.contextMenuStrip4 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnDeleteInstructor = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllData)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
@@ -315,14 +316,14 @@
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(210, 24);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(122, 24);
             this.toolStripMenuItem1.Text = "Edit";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(210, 24);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(122, 24);
             this.toolStripMenuItem2.Text = "Delete";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
@@ -345,7 +346,7 @@
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(210, 24);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(122, 24);
             this.toolStripMenuItem4.Text = "Delete";
             this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
@@ -368,15 +369,26 @@
             // toolStripMenuItem6
             // 
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(210, 24);
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(122, 24);
             this.toolStripMenuItem6.Text = "Delete";
             this.toolStripMenuItem6.Click += new System.EventHandler(this.toolStripMenuItem6_Click);
+            // 
+            // btnDeleteInstructor
+            // 
+            this.btnDeleteInstructor.Location = new System.Drawing.Point(273, 636);
+            this.btnDeleteInstructor.Name = "btnDeleteInstructor";
+            this.btnDeleteInstructor.Size = new System.Drawing.Size(228, 51);
+            this.btnDeleteInstructor.TabIndex = 21;
+            this.btnDeleteInstructor.Text = "Delete Instructor";
+            this.btnDeleteInstructor.UseVisualStyleBackColor = true;
+            this.btnDeleteInstructor.Click += new System.EventHandler(this.btnDeleteInstructor_Click);
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1483, 635);
+            this.ClientSize = new System.Drawing.Size(1483, 750);
+            this.Controls.Add(this.btnDeleteInstructor);
             this.Controls.Add(this.btnUpdateSubscriptionPeriod);
             this.Controls.Add(this.btnUpdatePayment);
             this.Controls.Add(this.btnBeltRank);
@@ -443,6 +455,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip4;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
+        private System.Windows.Forms.Button btnDeleteInstructor;
     }
 }
 

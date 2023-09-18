@@ -296,5 +296,20 @@ namespace KaratePresentationLayer
             frm.ShowDialog();
 
         }
+
+        private void btnDeleteMember_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDeleteInstructor_Click(object sender, EventArgs e)
+        {
+            FormDelete frm = new FormDelete();
+
+            frm.ShowDialog();
+
+            _LoadInstructorsData();
+
+        }
     }
 }
