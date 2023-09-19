@@ -22,7 +22,7 @@ namespace KaratePresentationLayer
         }
         
         
-        // Belt Test Edit Delete Find Add Update Delete
+        // Belt Test Find Update Delete
         // Check if you can make user control to shorten forms
 
         private void _LoadMembersData()
@@ -135,6 +135,13 @@ namespace KaratePresentationLayer
         private void btnSubscriptionPeriod_Click(object sender, EventArgs e)
         {
             FormFindSubscriptionPeriod frm = new FormFindSubscriptionPeriod();
+
+            frm.ShowDialog();
+        }
+
+        private void btnFindBeltTest_Click(object sender, EventArgs e)
+        {
+            FormFindBeltTest frm = new FormFindBeltTest();
 
             frm.ShowDialog();
         }

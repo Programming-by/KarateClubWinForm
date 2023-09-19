@@ -423,6 +423,7 @@
             this.btnFindBeltTest.TabIndex = 26;
             this.btnFindBeltTest.Text = "Find Belt Test";
             this.btnFindBeltTest.UseVisualStyleBackColor = true;
+            this.btnFindBeltTest.Click += new System.EventHandler(this.btnFindBeltTest_Click);
             // 
             // btnAddBeltTest
             // 
@@ -459,19 +460,19 @@
             this.editToolStripMenuItemForBeltTest,
             this.deleteToolStripMenuItemForBeltTests});
             this.contextMenuStripForBeltTests.Name = "contextMenuStripForBeltTests";
-            this.contextMenuStripForBeltTests.Size = new System.Drawing.Size(211, 80);
+            this.contextMenuStripForBeltTests.Size = new System.Drawing.Size(123, 52);
             // 
             // editToolStripMenuItemForBeltTest
             // 
             this.editToolStripMenuItemForBeltTest.Name = "editToolStripMenuItemForBeltTest";
-            this.editToolStripMenuItemForBeltTest.Size = new System.Drawing.Size(210, 24);
+            this.editToolStripMenuItemForBeltTest.Size = new System.Drawing.Size(122, 24);
             this.editToolStripMenuItemForBeltTest.Text = "Edit";
             this.editToolStripMenuItemForBeltTest.Click += new System.EventHandler(this.editToolStripMenuItemForBeltTest_Click);
             // 
             // deleteToolStripMenuItemForBeltTests
             // 
             this.deleteToolStripMenuItemForBeltTests.Name = "deleteToolStripMenuItemForBeltTests";
-            this.deleteToolStripMenuItemForBeltTests.Size = new System.Drawing.Size(210, 24);
+            this.deleteToolStripMenuItemForBeltTests.Size = new System.Drawing.Size(122, 24);
             this.deleteToolStripMenuItemForBeltTests.Text = "Delete";
             this.deleteToolStripMenuItemForBeltTests.Click += new System.EventHandler(this.deleteToolStripMenuItemForBeltTests_Click);
             // 
