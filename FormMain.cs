@@ -22,7 +22,7 @@ namespace KaratePresentationLayer
         }
         
         
-        // Belt Test Create Read Update Delete
+        // Belt Test Edit Delete Find Add Update Delete
         // Check if you can make user control to shorten forms
 
         private void _LoadMembersData()
@@ -97,7 +97,7 @@ namespace KaratePresentationLayer
         {
             _LoadBeltTestsData();
 
-          //  dgvAllData.ContextMenuStrip = contextMenuStrip5;
+           dgvAllData.ContextMenuStrip = contextMenuStripForBeltTests;
         }
 
         private void btnFindMember_Click(object sender, EventArgs e)
@@ -337,5 +337,18 @@ namespace KaratePresentationLayer
             frm.ShowDialog();
         }
 
+        private void editToolStripMenuItemForBeltTest_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddBeltTest_Click(object sender, EventArgs e)
+        {
+            FormAddEditBeltTest frm = new FormAddEditBeltTest(-1);
+
+            frm.ShowDialog();
+
+            _LoadBeltTestsData();
+        }
     }
 }

@@ -47,3 +47,4 @@ C:\Users\User\Source\Repos\KarateClubPresentationLayer\obj\Debug\KaratePresentat
 C:\Users\User\Source\Repos\KarateClubPresentationLayer\obj\Debug\KaratePresentationLayer.FormDeleteSubscriptionPeriod.resources
 C:\Users\User\Source\Repos\KarateClubPresentationLayer\obj\Debug\KaratePresentationLayer.FormDeletePayment.resources
 C:\Users\User\Source\Repos\KarateClubPresentationLayer\obj\Debug\KaratePresentationLayer.FormDeleteMember.resources
+C:\Users\User\Source\Repos\KarateClubPresentationLayer\obj\Debug\KaratePresentationLayer.FormAddEditBeltTest.resources

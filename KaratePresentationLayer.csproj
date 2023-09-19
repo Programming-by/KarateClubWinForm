@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAddEditBeltTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddEditBeltTest.Designer.cs">
+      <DependentUpon>FormAddEditBeltTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAddEditInstructors.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,9 @@
     <Compile Include="FormUpdateInstructor.Designer.cs">
       <DependentUpon>FormUpdateInstructor.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormAddEditBeltTest.resx">
+      <DependentUpon>FormAddEditBeltTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAddEditInstructors.resx">
       <DependentUpon>FormAddEditInstructors.cs</DependentUpon>
     </EmbeddedResource>
