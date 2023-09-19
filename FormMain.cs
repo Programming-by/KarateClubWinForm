@@ -339,7 +339,11 @@ namespace KaratePresentationLayer
 
         private void editToolStripMenuItemForBeltTest_Click(object sender, EventArgs e)
         {
+            FormAddEditBeltTest frm = new FormAddEditBeltTest((int)dgvAllData.CurrentRow.Cells[0].Value); 
 
+            frm.ShowDialog();
+
+            _LoadBeltTestsData();
         }
 
         private void btnAddBeltTest_Click(object sender, EventArgs e)

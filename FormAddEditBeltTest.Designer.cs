@@ -59,9 +59,12 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblBeltRank = new System.Windows.Forms.Label();
+            this.numericBeltRank = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.numericLastBeltRank)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericBeltRank)).BeginInit();
             this.SuspendLayout();
             // 
             // lblMode
@@ -362,11 +365,35 @@
             this.groupBox2.TabIndex = 80;
             this.groupBox2.TabStop = false;
             // 
+            // lblBeltRank
+            // 
+            this.lblBeltRank.AutoSize = true;
+            this.lblBeltRank.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBeltRank.Location = new System.Drawing.Point(960, 196);
+            this.lblBeltRank.Name = "lblBeltRank";
+            this.lblBeltRank.Size = new System.Drawing.Size(163, 46);
+            this.lblBeltRank.TabIndex = 81;
+            this.lblBeltRank.Text = "Rank ID";
+            // 
+            // numericBeltRank
+            // 
+            this.numericBeltRank.Location = new System.Drawing.Point(1155, 205);
+            this.numericBeltRank.Maximum = new decimal(new int[] {
+            17,
+            0,
+            0,
+            0});
+            this.numericBeltRank.Name = "numericBeltRank";
+            this.numericBeltRank.Size = new System.Drawing.Size(120, 22);
+            this.numericBeltRank.TabIndex = 82;
+            // 
             // FormAddEditBeltTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1421, 1026);
+            this.Controls.Add(this.numericBeltRank);
+            this.Controls.Add(this.lblBeltRank);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnClose);
@@ -402,6 +429,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericBeltRank)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -440,5 +468,7 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label lblBeltRank;
+        private System.Windows.Forms.NumericUpDown numericBeltRank;
     }
 }

@@ -24,13 +24,13 @@ namespace KaratePresentationLayer
         clsBeltTest _BeltTest;
         clsPayment _Payment;
 
-        int _MemberID;
-        public FormAddEditBeltTest(int MemberID)
+        int _PersonID;
+        public FormAddEditBeltTest(int PersonID)
         {
 
-            _MemberID = MemberID;
+            _PersonID = PersonID;
 
-            if (_MemberID == -1) 
+            if (_PersonID == -1) 
             {
                 _Mode = enMode.AddNew;
 
@@ -63,9 +63,62 @@ namespace KaratePresentationLayer
                 return;
             }
 
+            _Person = clsPeople.Find(_PersonID);
+            _Member = clsMember.Find(_PersonID);
+            _Instructor = clsInstructor.Find(_PersonID);
+            _BeltTest = clsBeltTest.Find(_PersonID);
 
-            //_BeltTest = clsBeltTest.Find();
 
+            if (_Person == null && _Member == null && _Instructor == null && _BeltTest == null)
+            {
+                MessageBox.Show("this form will be closed because No Belt Test with ID  = " + _PersonID);
+
+                this.Close();
+            }
+       
+
+
+            txtName.Text = _Person.Name;
+            txtContactInfo.Text = _Person.ContactInfo;
+            txtAddress.Text = _Person.Address;
+            txtEmergencyContactInfo.Text = _Member.EmergencyContactInfo;
+            numericLastBeltRank.Value = _Member.LastBeltRank;
+
+            if (_Member.IsActive == true)
+            {
+                rbActive.Checked = true;
+            }
+            else
+            {
+                rbNotActive.Checked = true;
+            }
+
+            txtQualifications.Text = _Instructor.Qualifications;
+
+            numericBeltRank.Value = _BeltTest.RankID;
+
+            if (_BeltTest.Result == true)
+            {
+                rbResult.Checked = true;
+            }
+            else
+            {
+                rbNoResult.Checked = true;
+            }
+
+            BeltTestdateTimePicker.Value = _BeltTest.Date;
+
+            _Payment = clsPayment.Find(_Member.MemberID);
+
+            if (_Payment != null)
+            {
+                txtAmount.Text = _Payment.Amount.ToString();
+
+                dateTimePicker.Value = _Payment.Date;
+            } else
+            {
+                return;
+            }
 
         }
 
@@ -89,10 +142,11 @@ namespace KaratePresentationLayer
 
             _Instructor.Qualifications = txtQualifications.Text;
 
-            _Payment.Amount = 20;
+            _Payment.Amount = Convert.ToDecimal(txtAmount.Text);
+
             _Payment.Date = dateTimePicker.Value;
 
-            _BeltTest.RankID = 5;
+            _BeltTest.RankID = Convert.ToInt32(numericBeltRank.Value);
 
             if (rbResult.Checked)
             {
@@ -126,11 +180,11 @@ namespace KaratePresentationLayer
 
                     if (_BeltTest.Save())
                     {
-                        MessageBox.Show("Belt Test Added Successfully");
+                        MessageBox.Show("Belt Test saved Successfully");
                     }
                     else
                     {
-                        MessageBox.Show("Belt Test Failed to be Added");
+                        MessageBox.Show("Belt Test Failed to save");
 
                     }
                 }
