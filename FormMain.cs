@@ -22,8 +22,8 @@ namespace KaratePresentationLayer
         }
         
         
-        // Belt Test Crud
-        // Delete Forms 
+        // Belt Test Create Read Update Delete
+        // Check if you can make user control to shorten forms
 
         private void _LoadMembersData()
         {
@@ -48,6 +48,11 @@ namespace KaratePresentationLayer
         private void _LoadBeltRanksData()
         {
             dgvAllData.DataSource = clsBeltRank.GetAllBeltRanks();
+        }
+
+        private void _LoadBeltTestsData()
+        {
+            dgvAllData.DataSource = clsBeltTest.GetAllBeltTests();
         }
 
         private void btnGetAllMembers_Click(object sender, EventArgs e)
@@ -81,14 +86,19 @@ namespace KaratePresentationLayer
 
         }
 
-        private void btnSupscriptionPeriods_Click(object sender, EventArgs e)
+        private void btnGetAllSupscriptionPeriods_Click(object sender, EventArgs e)
         {
             _LoadSubscriptionPeriodssData();
 
             dgvAllData.ContextMenuStrip = contextMenuStrip4;
-
         }
+      
+        private void btnGetAllBeltTests_Click(object sender, EventArgs e)
+        {
+            _LoadBeltTestsData();
 
+          //  dgvAllData.ContextMenuStrip = contextMenuStrip5;
+        }
 
         private void btnFindMember_Click(object sender, EventArgs e)
         {
@@ -299,7 +309,6 @@ namespace KaratePresentationLayer
 
         private void btnDeleteMember_Click(object sender, EventArgs e)
         {
-            //delete sub period and payment before delete member
 
             FormDeleteMember frm = new FormDeleteMember();
 

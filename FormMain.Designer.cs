@@ -64,6 +64,7 @@
             this.btnDeleteSubscriptionPeriod = new System.Windows.Forms.Button();
             this.btnDeletePayment = new System.Windows.Forms.Button();
             this.btnDeleteMember = new System.Windows.Forms.Button();
+            this.btnGetAllBeltTests = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllData)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
@@ -145,7 +146,7 @@
             this.btnGetAllSubscriptionPeriods.TabIndex = 4;
             this.btnGetAllSubscriptionPeriods.Text = "Get All Subscription Periods";
             this.btnGetAllSubscriptionPeriods.UseVisualStyleBackColor = true;
-            this.btnGetAllSubscriptionPeriods.Click += new System.EventHandler(this.btnSupscriptionPeriods_Click);
+            this.btnGetAllSubscriptionPeriods.Click += new System.EventHandler(this.btnGetAllSupscriptionPeriods_Click);
             // 
             // btnGetAllBeltRanks
             // 
@@ -396,11 +397,22 @@
             this.btnDeleteMember.UseVisualStyleBackColor = true;
             this.btnDeleteMember.Click += new System.EventHandler(this.btnDeleteMember_Click);
             // 
+            // btnGetAllBeltTests
+            // 
+            this.btnGetAllBeltTests.Location = new System.Drawing.Point(12, 360);
+            this.btnGetAllBeltTests.Name = "btnGetAllBeltTests";
+            this.btnGetAllBeltTests.Size = new System.Drawing.Size(228, 51);
+            this.btnGetAllBeltTests.TabIndex = 25;
+            this.btnGetAllBeltTests.Text = "Get All Belt Tests";
+            this.btnGetAllBeltTests.UseVisualStyleBackColor = true;
+            this.btnGetAllBeltTests.Click += new System.EventHandler(this.btnGetAllBeltTests_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1483, 750);
+            this.Controls.Add(this.btnGetAllBeltTests);
             this.Controls.Add(this.btnDeleteMember);
             this.Controls.Add(this.btnDeletePayment);
             this.Controls.Add(this.btnDeleteSubscriptionPeriod);
@@ -471,6 +483,7 @@
         private System.Windows.Forms.Button btnDeleteSubscriptionPeriod;
         private System.Windows.Forms.Button btnDeletePayment;
         private System.Windows.Forms.Button btnDeleteMember;
+        private System.Windows.Forms.Button btnGetAllBeltTests;
     }
 }
 
