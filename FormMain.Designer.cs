@@ -45,12 +45,10 @@
             this.btnSubscriptionPeriod = new System.Windows.Forms.Button();
             this.btnAddMember = new System.Windows.Forms.Button();
             this.btnAddInstructor = new System.Windows.Forms.Button();
-            this.btnAddBeltRank = new System.Windows.Forms.Button();
             this.btnAddPayment = new System.Windows.Forms.Button();
             this.btnAddSubscriptionPeriod = new System.Windows.Forms.Button();
             this.btnUpdateMember = new System.Windows.Forms.Button();
             this.btnUpdateInstructor = new System.Windows.Forms.Button();
-            this.btnBeltRank = new System.Windows.Forms.Button();
             this.btnUpdatePayment = new System.Windows.Forms.Button();
             this.btnUpdateSubscriptionPeriod = new System.Windows.Forms.Button();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -65,6 +63,7 @@
             this.btnDeleteInstructor = new System.Windows.Forms.Button();
             this.btnDeleteSubscriptionPeriod = new System.Windows.Forms.Button();
             this.btnDeletePayment = new System.Windows.Forms.Button();
+            this.btnDeleteMember = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllData)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
@@ -228,15 +227,6 @@
             this.btnAddInstructor.UseVisualStyleBackColor = true;
             this.btnAddInstructor.Click += new System.EventHandler(this.btnAddInstructor_Click);
             // 
-            // btnAddBeltRank
-            // 
-            this.btnAddBeltRank.Location = new System.Drawing.Point(531, 487);
-            this.btnAddBeltRank.Name = "btnAddBeltRank";
-            this.btnAddBeltRank.Size = new System.Drawing.Size(228, 51);
-            this.btnAddBeltRank.TabIndex = 13;
-            this.btnAddBeltRank.Text = "Add Belt Rank";
-            this.btnAddBeltRank.UseVisualStyleBackColor = true;
-            // 
             // btnAddPayment
             // 
             this.btnAddPayment.Location = new System.Drawing.Point(791, 487);
@@ -276,15 +266,6 @@
             this.btnUpdateInstructor.Text = "Update Instructor";
             this.btnUpdateInstructor.UseVisualStyleBackColor = true;
             this.btnUpdateInstructor.Click += new System.EventHandler(this.btnUpdateInstructor_Click);
-            // 
-            // btnBeltRank
-            // 
-            this.btnBeltRank.Location = new System.Drawing.Point(531, 558);
-            this.btnBeltRank.Name = "btnBeltRank";
-            this.btnBeltRank.Size = new System.Drawing.Size(228, 51);
-            this.btnBeltRank.TabIndex = 18;
-            this.btnBeltRank.Text = "Update Belt Rank";
-            this.btnBeltRank.UseVisualStyleBackColor = true;
             // 
             // btnUpdatePayment
             // 
@@ -405,22 +386,31 @@
             this.btnDeletePayment.UseVisualStyleBackColor = true;
             this.btnDeletePayment.Click += new System.EventHandler(this.btnDeletePayment_Click);
             // 
+            // btnDeleteMember
+            // 
+            this.btnDeleteMember.Location = new System.Drawing.Point(12, 636);
+            this.btnDeleteMember.Name = "btnDeleteMember";
+            this.btnDeleteMember.Size = new System.Drawing.Size(228, 51);
+            this.btnDeleteMember.TabIndex = 24;
+            this.btnDeleteMember.Text = "Delete Member";
+            this.btnDeleteMember.UseVisualStyleBackColor = true;
+            this.btnDeleteMember.Click += new System.EventHandler(this.btnDeleteMember_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1483, 750);
+            this.Controls.Add(this.btnDeleteMember);
             this.Controls.Add(this.btnDeletePayment);
             this.Controls.Add(this.btnDeleteSubscriptionPeriod);
             this.Controls.Add(this.btnDeleteInstructor);
             this.Controls.Add(this.btnUpdateSubscriptionPeriod);
             this.Controls.Add(this.btnUpdatePayment);
-            this.Controls.Add(this.btnBeltRank);
             this.Controls.Add(this.btnUpdateInstructor);
             this.Controls.Add(this.btnUpdateMember);
             this.Controls.Add(this.btnAddSubscriptionPeriod);
             this.Controls.Add(this.btnAddPayment);
-            this.Controls.Add(this.btnAddBeltRank);
             this.Controls.Add(this.btnAddInstructor);
             this.Controls.Add(this.btnAddMember);
             this.Controls.Add(this.btnSubscriptionPeriod);
@@ -459,12 +449,10 @@
         private System.Windows.Forms.Button btnSubscriptionPeriod;
         private System.Windows.Forms.Button btnAddMember;
         private System.Windows.Forms.Button btnAddInstructor;
-        private System.Windows.Forms.Button btnAddBeltRank;
         private System.Windows.Forms.Button btnAddPayment;
         private System.Windows.Forms.Button btnAddSubscriptionPeriod;
         private System.Windows.Forms.Button btnUpdateMember;
         private System.Windows.Forms.Button btnUpdateInstructor;
-        private System.Windows.Forms.Button btnBeltRank;
         private System.Windows.Forms.Button btnUpdatePayment;
         private System.Windows.Forms.Button btnUpdateSubscriptionPeriod;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
@@ -482,6 +470,7 @@
         private System.Windows.Forms.Button btnDeleteInstructor;
         private System.Windows.Forms.Button btnDeleteSubscriptionPeriod;
         private System.Windows.Forms.Button btnDeletePayment;
+        private System.Windows.Forms.Button btnDeleteMember;
     }
 }
 

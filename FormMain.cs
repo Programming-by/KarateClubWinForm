@@ -300,6 +300,11 @@ namespace KaratePresentationLayer
         private void btnDeleteMember_Click(object sender, EventArgs e)
         {
             //delete sub period and payment before delete member
+
+            FormDeleteMember frm = new FormDeleteMember();
+
+            frm.ShowDialog();
+
         }
 
         private void btnDeleteInstructor_Click(object sender, EventArgs e)
@@ -326,5 +331,6 @@ namespace KaratePresentationLayer
 
             frm.ShowDialog();
         }
+
     }
 }
