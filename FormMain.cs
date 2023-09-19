@@ -319,5 +319,12 @@ namespace KaratePresentationLayer
             frm.ShowDialog();
             _LoadSubscriptionPeriodssData();
         }
+
+        private void btnDeletePayment_Click(object sender, EventArgs e)
+        {
+            FormDeletePayment frm = new FormDeletePayment();
+
+            frm.ShowDialog();
+        }
     }
 }

@@ -64,6 +64,7 @@
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.btnDeleteInstructor = new System.Windows.Forms.Button();
             this.btnDeleteSubscriptionPeriod = new System.Windows.Forms.Button();
+            this.btnDeletePayment = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllData)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
@@ -394,11 +395,22 @@
             this.btnDeleteSubscriptionPeriod.UseVisualStyleBackColor = true;
             this.btnDeleteSubscriptionPeriod.Click += new System.EventHandler(this.btnDeleteSubscriptionPeriod_Click);
             // 
+            // btnDeletePayment
+            // 
+            this.btnDeletePayment.Location = new System.Drawing.Point(791, 636);
+            this.btnDeletePayment.Name = "btnDeletePayment";
+            this.btnDeletePayment.Size = new System.Drawing.Size(228, 51);
+            this.btnDeletePayment.TabIndex = 23;
+            this.btnDeletePayment.Text = "Delete Payment";
+            this.btnDeletePayment.UseVisualStyleBackColor = true;
+            this.btnDeletePayment.Click += new System.EventHandler(this.btnDeletePayment_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1483, 750);
+            this.Controls.Add(this.btnDeletePayment);
             this.Controls.Add(this.btnDeleteSubscriptionPeriod);
             this.Controls.Add(this.btnDeleteInstructor);
             this.Controls.Add(this.btnUpdateSubscriptionPeriod);
@@ -469,6 +481,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
         private System.Windows.Forms.Button btnDeleteInstructor;
         private System.Windows.Forms.Button btnDeleteSubscriptionPeriod;
+        private System.Windows.Forms.Button btnDeletePayment;
     }
 }
 

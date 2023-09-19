@@ -76,6 +76,12 @@
     <Compile Include="FormDeleteInstructors.Designer.cs">
       <DependentUpon>FormDeleteInstructors.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDeletePayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDeletePayment.Designer.cs">
+      <DependentUpon>FormDeletePayment.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDeleteSubscriptionPeriod.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDeleteInstructors.resx">
       <DependentUpon>FormDeleteInstructors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDeletePayment.resx">
+      <DependentUpon>FormDeletePayment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDeleteSubscriptionPeriod.resx">
       <DependentUpon>FormDeleteSubscriptionPeriod.cs</DependentUpon>

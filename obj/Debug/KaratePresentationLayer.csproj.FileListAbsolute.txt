@@ -45,3 +45,4 @@ C:\Users\User\Source\Repos\KarateClubPresentationLayer\obj\Debug\KaratePresentat
 C:\Users\User\Source\Repos\KarateClubPresentationLayer\obj\Debug\KaratePresentationLayer.FormUpdateSubscriptionPeriod.resources
 C:\Users\User\Source\Repos\KarateClubPresentationLayer\obj\Debug\KaratePresentationLayer.FormDeleteInstructors.resources
 C:\Users\User\Source\Repos\KarateClubPresentationLayer\obj\Debug\KaratePresentationLayer.FormDeleteSubscriptionPeriod.resources
+C:\Users\User\Source\Repos\KarateClubPresentationLayer\obj\Debug\KaratePresentationLayer.FormDeletePayment.resources
