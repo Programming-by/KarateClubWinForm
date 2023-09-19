@@ -59,7 +59,7 @@ namespace KaratePresentationLayer
         {
             _LoadMembersData();
 
-            dgvAllData.ContextMenuStrip = contextMenuStrip1;
+            dgvAllData.ContextMenuStrip = contextMenuStripForMembers;
 
         }
 
@@ -67,7 +67,7 @@ namespace KaratePresentationLayer
         {
             _LoadInstructorsData();
 
-            dgvAllData.ContextMenuStrip = contextMenuStrip2;
+            dgvAllData.ContextMenuStrip = contextMenuStripForInstructors;
 
 
         }
@@ -81,7 +81,7 @@ namespace KaratePresentationLayer
         {
             _LoadPaymentsData();
 
-            dgvAllData.ContextMenuStrip = contextMenuStrip3;
+            dgvAllData.ContextMenuStrip = contextMenuStripForPayments;
 
 
         }
@@ -90,7 +90,7 @@ namespace KaratePresentationLayer
         {
             _LoadSubscriptionPeriodssData();
 
-            dgvAllData.ContextMenuStrip = contextMenuStrip4;
+            dgvAllData.ContextMenuStrip = contextMenuStripForSubscriptionPeriods;
         }
       
         private void btnGetAllBeltTests_Click(object sender, EventArgs e)
@@ -177,17 +177,16 @@ namespace KaratePresentationLayer
             _LoadSubscriptionPeriodssData();
         }
 
-        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        private void editToolStripMenuItemForMembers_Click(object sender, EventArgs e)
         {
-            FormAddEditMembers frm = new FormAddEditMembers((int) dgvAllData.CurrentRow.Cells[0].Value);
+            FormAddEditMembers frm = new FormAddEditMembers((int)dgvAllData.CurrentRow.Cells[0].Value);
 
             frm.ShowDialog();
 
             _LoadMembersData();
-
         }
 
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        private void toolStripMenuItemForInstructors_Click(object sender, EventArgs e)
         {
             FormAddEditInstructors frm = new FormAddEditInstructors((int)dgvAllData.CurrentRow.Cells[0].Value);
 
@@ -196,16 +195,16 @@ namespace KaratePresentationLayer
             _LoadInstructorsData();
         }
 
-        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        private void toolStripMenuItemForPayments_Click(object sender, EventArgs e)
         {
-            FormAddEditPayments frm = new FormAddEditPayments((int)dgvAllData.CurrentRow.Cells[0].Value);
+                FormAddEditPayments frm = new FormAddEditPayments((int)dgvAllData.CurrentRow.Cells[0].Value);
 
-            frm.ShowDialog();
+                frm.ShowDialog();
 
-            _LoadPaymentsData();
+                _LoadPaymentsData();
         }
 
-        private void toolStripMenuItem5_Click(object sender, EventArgs e)
+        private void toolStripMenuItemForSubscriptionPeriods_Click(object sender, EventArgs e)
         {
             FormAddEditSubscriptionPeriods frm = new FormAddEditSubscriptionPeriods((int)dgvAllData.CurrentRow.Cells[0].Value);
 
@@ -214,57 +213,55 @@ namespace KaratePresentationLayer
             _LoadSubscriptionPeriodssData();
 
         }
-
-        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        private void deleteToolStripMenuItemForMembers_Click(object sender, EventArgs e)
         {
+
             if (MessageBox.Show("Are you sure you want to delete Member [" + dgvAllData.CurrentRow.Cells[0].Value + "]", "Confirm Delete", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
-                toolStripMenuItem4_Click(sender, e);
-                toolStripMenuItem6_Click(sender, e);
+                deleteStripMenuItemForPayments_Click(sender, e);
+                deleteStripMenuItemForSubscriptionPeriods_Click(sender, e);
                 if (clsMember.Delete((int)dgvAllData.CurrentRow.Cells[0].Value))
                 {
                     MessageBox.Show("Member Deleted Successfully.");
+                    _LoadMembersData();
+
+                }
+            }
+        }
+
+        private void deleteStripMenuItemForInstructors_Click(object sender, EventArgs e)
+        {
+
+                if (MessageBox.Show("Are you sure you want to delete Instructor [" + dgvAllData.CurrentRow.Cells[0].Value + "]", "Confirm Delete", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                {
+                    if (clsInstructor.Delete((int)dgvAllData.CurrentRow.Cells[0].Value))
+                    {
+                        if (clsPeople.Delete((int)dgvAllData.CurrentRow.Cells[0].Value))
+                        {
+                            MessageBox.Show("Instructor Deleted Successfully.");
+                            _LoadInstructorsData();
+                        }
+                    }
+                }
+    }
+     
+        private void deleteStripMenuItemForPayments_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to delete Payment [" + dgvAllData.CurrentRow.Cells[0].Value + "]", "Confirm Delete", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                deleteStripMenuItemForSubscriptionPeriods_Click(sender, e);
+
+                if (clsPayment.Delete((int)dgvAllData.CurrentRow.Cells[0].Value))
+                {
+                    MessageBox.Show("Payment Deleted Successfully.");
                     _LoadPaymentsData();
 
                 }
 
             }
-
         }
 
-        private void toolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Are you sure you want to delete Instructor [" + dgvAllData.CurrentRow.Cells[0].Value + "]", "Confirm Delete", MessageBoxButtons.OKCancel) == DialogResult.OK)
-            {
-                if (clsInstructor.Delete((int)dgvAllData.CurrentRow.Cells[0].Value))
-                {
-                    if (clsPeople.Delete((int)dgvAllData.CurrentRow.Cells[0].Value))
-                    {
-                        MessageBox.Show("Instructor Deleted Successfully.");
-                        _LoadInstructorsData();
-                    }
-                }
-            }
-
-        }
-
-        private void toolStripMenuItem4_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Are you sure you want to delete Payment [" + dgvAllData.CurrentRow.Cells[0].Value + "]", "Confirm Delete", MessageBoxButtons.OKCancel) == DialogResult.OK)
-            {
-                toolStripMenuItem6_Click(sender, e);
-                
-                    if (clsPayment.Delete((int)dgvAllData.CurrentRow.Cells[0].Value))
-                    {
-                        MessageBox.Show("Payment Deleted Successfully.");
-                        _LoadPaymentsData();
-
-                    }
-                
-            }
-        }
-
-        private void toolStripMenuItem6_Click(object sender, EventArgs e)
+        private void deleteStripMenuItemForSubscriptionPeriods_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are you sure you want to delete Subscription Period [" + dgvAllData.CurrentRow.Cells[0].Value + "]", "Confirm Delete", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
@@ -275,7 +272,6 @@ namespace KaratePresentationLayer
 
                 }
             }
-
         }
 
         private void btnUpdateMember_Click(object sender, EventArgs e)
