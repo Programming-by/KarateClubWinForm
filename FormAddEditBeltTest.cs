@@ -131,6 +131,7 @@ namespace KaratePresentationLayer
 
             _Member.EmergencyContactInfo = txtEmergencyContactInfo.Text;
             _Member.LastBeltRank = Convert.ToInt32(numericLastBeltRank.Value);
+
             if (rbActive.Checked)
             {
                 _Member.IsActive =  true;

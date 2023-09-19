@@ -459,7 +459,7 @@
             this.editToolStripMenuItemForBeltTest,
             this.deleteToolStripMenuItemForBeltTests});
             this.contextMenuStripForBeltTests.Name = "contextMenuStripForBeltTests";
-            this.contextMenuStripForBeltTests.Size = new System.Drawing.Size(123, 52);
+            this.contextMenuStripForBeltTests.Size = new System.Drawing.Size(211, 80);
             // 
             // editToolStripMenuItemForBeltTest
             // 
@@ -473,6 +473,7 @@
             this.deleteToolStripMenuItemForBeltTests.Name = "deleteToolStripMenuItemForBeltTests";
             this.deleteToolStripMenuItemForBeltTests.Size = new System.Drawing.Size(210, 24);
             this.deleteToolStripMenuItemForBeltTests.Text = "Delete";
+            this.deleteToolStripMenuItemForBeltTests.Click += new System.EventHandler(this.deleteToolStripMenuItemForBeltTests_Click);
             // 
             // FormMain
             // 

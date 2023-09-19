@@ -213,6 +213,14 @@ namespace KaratePresentationLayer
             _LoadSubscriptionPeriodssData();
 
         }
+        private void editToolStripMenuItemForBeltTest_Click(object sender, EventArgs e)
+        {
+            FormAddEditBeltTest frm = new FormAddEditBeltTest((int)dgvAllData.CurrentRow.Cells[0].Value); 
+
+            frm.ShowDialog();
+
+            _LoadBeltTestsData();
+        }
         private void deleteToolStripMenuItemForMembers_Click(object sender, EventArgs e)
         {
 
@@ -270,6 +278,25 @@ namespace KaratePresentationLayer
                     MessageBox.Show("Subscription Period Deleted Successfully.");
                     _LoadSubscriptionPeriodssData();
 
+                }
+            }
+        }
+        private void deleteToolStripMenuItemForBeltTests_Click(object sender, EventArgs e)
+        {
+            clsMember _Member = clsMember.Find((int)dgvAllData.CurrentRow.Cells[0].Value);
+
+                 if (_Member == null)
+            {
+                MessageBox.Show("No Member found");
+                this.Close();
+            }
+
+            if (MessageBox.Show("Are you sure you want to delete Belt Test [" + dgvAllData.CurrentRow.Cells[0].Value + "]", "Confirm Delete", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                if (clsBeltTest.Delete(_Member.MemberID))
+                {
+                    MessageBox.Show("Belt Test Deleted Successfully.");
+                    _LoadBeltTestsData();
                 }
             }
         }
@@ -337,14 +364,6 @@ namespace KaratePresentationLayer
             frm.ShowDialog();
         }
 
-        private void editToolStripMenuItemForBeltTest_Click(object sender, EventArgs e)
-        {
-            FormAddEditBeltTest frm = new FormAddEditBeltTest((int)dgvAllData.CurrentRow.Cells[0].Value); 
-
-            frm.ShowDialog();
-
-            _LoadBeltTestsData();
-        }
 
         private void btnAddBeltTest_Click(object sender, EventArgs e)
         {
@@ -354,5 +373,6 @@ namespace KaratePresentationLayer
 
             _LoadBeltTestsData();
         }
+
     }
 }
