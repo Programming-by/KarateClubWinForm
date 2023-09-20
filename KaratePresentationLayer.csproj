@@ -148,6 +148,12 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUpdateBeltTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdateBeltTest.Designer.cs">
+      <DependentUpon>FormUpdateBeltTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUpdateMember.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,6 +230,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdateBeltTest.resx">
+      <DependentUpon>FormUpdateBeltTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUpdateMember.resx">
       <DependentUpon>FormUpdateMember.cs</DependentUpon>

@@ -22,7 +22,7 @@ namespace KaratePresentationLayer
         }
         
         
-        // Belt Test Update Delete
+        // Belt Test Update
         // Check if you can make user control to shorten forms
 
         private void _LoadMembersData()
@@ -389,5 +389,13 @@ namespace KaratePresentationLayer
             _LoadBeltTestsData();
         }
 
+        private void btnUpdateBeltTest_Click(object sender, EventArgs e)
+        {
+            FormUpdateBeltTest frm = new FormUpdateBeltTest();
+
+            frm.ShowDialog();
+
+            _LoadBeltTestsData();
+        }
     }
 }

@@ -443,6 +443,7 @@
             this.btnUpdateBeltTest.TabIndex = 28;
             this.btnUpdateBeltTest.Text = "Update Belt Test";
             this.btnUpdateBeltTest.UseVisualStyleBackColor = true;
+            this.btnUpdateBeltTest.Click += new System.EventHandler(this.btnUpdateBeltTest_Click);
             // 
             // btnDeleteBeltTest
             // 
