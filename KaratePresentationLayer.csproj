@@ -76,6 +76,12 @@
     <Compile Include="FormAddEditSubscriptionPeriods.Designer.cs">
       <DependentUpon>FormAddEditSubscriptionPeriods.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDeleteBeltTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDeleteBeltTest.Designer.cs">
+      <DependentUpon>FormDeleteBeltTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDeleteInstructors.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAddEditSubscriptionPeriods.resx">
       <DependentUpon>FormAddEditSubscriptionPeriods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDeleteBeltTest.resx">
+      <DependentUpon>FormDeleteBeltTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDeleteInstructors.resx">
       <DependentUpon>FormDeleteInstructors.cs</DependentUpon>

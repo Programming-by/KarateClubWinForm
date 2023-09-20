@@ -452,6 +452,7 @@
             this.btnDeleteBeltTest.TabIndex = 29;
             this.btnDeleteBeltTest.Text = "Delete Belt Test";
             this.btnDeleteBeltTest.UseVisualStyleBackColor = true;
+            this.btnDeleteBeltTest.Click += new System.EventHandler(this.btnDeleteBeltTest_Click);
             // 
             // contextMenuStripForBeltTests
             // 

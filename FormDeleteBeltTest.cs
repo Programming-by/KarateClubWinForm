@@ -11,10 +11,11 @@ using System.Windows.Forms;
 
 namespace KaratePresentationLayer
 {
-    public partial class FormDeleteMember : Form
+    public partial class FormDeleteBeltTest : Form
     {
+        clsBeltTest _BeltTest;
         clsMember _Member;
-        public FormDeleteMember()
+        public FormDeleteBeltTest()
         {
             InitializeComponent();
         }
@@ -26,10 +27,12 @@ namespace KaratePresentationLayer
 
         private void btnFind_Click(object sender, EventArgs e)
         {
-  
-            _Member = clsMember.Find(Convert.ToInt32(txtPersonID.Text));
 
-            if (_Member == null)
+
+            _BeltTest = clsBeltTest.Find(Convert.ToInt32(txtPersonID.Text));
+
+
+            if (_BeltTest == null)
             {
                 MessageBox.Show("this form will be closed because No Member with ID  = " + txtPersonID.Text);
 
@@ -47,33 +50,25 @@ namespace KaratePresentationLayer
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure you want to delete Member  [" + txtPersonID.Text + "]", "Confirm Delete", MessageBoxButtons.OKCancel) == DialogResult.OK)
+
+            _Member = clsMember.Find(Convert.ToInt32(txtPersonID.Text));
+
+            if (_Member == null)
+            {
+                MessageBox.Show("No Member Found");
+                this.Close();
+            }
+
+
+            if (MessageBox.Show("Are you sure you want to delete Belt Test  [" + txtPersonID.Text + "]", "Confirm Delete", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
 
-
-                if (clsSubscriptionPeriod.Delete(Convert.ToInt32(_Member.MemberID)))
+                if (clsBeltTest.Delete(Convert.ToInt32(_Member.MemberID)))
                 {
-                    MessageBox.Show("Period Deleted Successfully.");
+                    MessageBox.Show("Belt Test Deleted Successfully.");
                 }
-
-                if (clsPayment.Delete(Convert.ToInt32(_Member.MemberID)))
-                {
-                    MessageBox.Show("Payment Deleted Successfully.");
-                }
-
-
-
-                if (clsMember.Delete(Convert.ToInt32(txtPersonID.Text)))
-                {
-                    MessageBox.Show("Member Deleted Successfully.");
-                }
-
-
-
-
             }
         }
-  
-    
+
     }
 }
