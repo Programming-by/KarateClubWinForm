@@ -52,7 +52,6 @@ namespace KaratePresentationLayer
                 lblMode.Text = "Add New Period";
                 _Person = new clsPeople();
                 _Member = new clsMember();
-                _Payment = new clsPayment();
                 _SubscriptionPeriod = new clsSubscriptionPeriod();
                 
                 return;
@@ -62,19 +61,20 @@ namespace KaratePresentationLayer
 
             _Member = clsMember.Find(_PersonID);
 
-            
-
-
             if (_Person == null || _Member == null)
             {
                 MessageBox.Show("this form will be closed because No Member with ID  = " + _Member.PersonID);
 
                 this.Close();
-
             }
 
-            _Payment = clsPayment.Find(_Member.MemberID);
             _SubscriptionPeriod = clsSubscriptionPeriod.Find(_PersonID);
+        
+            if (_SubscriptionPeriod == null)
+            {
+                MessageBox.Show("there is no Subscription Period Found");
+                return;
+            }
 
             lblMode.Text = "Edit SubscriptionPeriod ID = " + _PersonID;
 
@@ -94,10 +94,17 @@ namespace KaratePresentationLayer
             }
             StartdateTimePicker.Value = _SubscriptionPeriod.StartDate;
             EnddateTimePicker.Value = _SubscriptionPeriod.EndDate;
-            txtFees.Text = _SubscriptionPeriod.Fees.ToString(); 
+            txtFees.Text = _SubscriptionPeriod.Fees.ToString();
+            _Payment = clsPayment.Find(_Member.MemberID);
+            if (_Payment != null)
+            {
             txtAmount.Text = _Payment.Amount.ToString();
             dateTimePicker.Value = _Payment.Date;
-
+            } else
+            {
+                MessageBox.Show("there is no Payment Found");
+                return;
+            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -107,12 +114,22 @@ namespace KaratePresentationLayer
             _Person.Address = txtAddress.Text;
             _Member.EmergencyContactInfo = txtEmergencyContactInfo.Text;
             _Member.LastBeltRank = Convert.ToInt32(numericLastBeltRank.Value);
-            _Member.IsActive = true;
+
+            if (rbActive.Checked)
+            {
+            _Member.IsActive =  true;
+
+            }
+            else
+            {
+                _Member.IsActive = false;
+            }
+
             _SubscriptionPeriod.StartDate = StartdateTimePicker.Value;
             _SubscriptionPeriod.EndDate = EnddateTimePicker.Value;
             _SubscriptionPeriod.Fees = Convert.ToDecimal(txtFees.Text);
-            _Payment.Amount = Convert.ToInt32(txtAmount.Text);
-            _Payment.Date = dateTimePicker.Value;
+
+
 
             if (_Person.Save())
             {
@@ -120,29 +137,21 @@ namespace KaratePresentationLayer
 
                 if (_Member.Save())
                 {
-                    _Payment.MemberID = _Member.MemberID;
 
-                    if (_Payment.Save())
+                    _FillPaymentDataIfExist();
+            
+                    _SubscriptionPeriod.MemberID =_Member.MemberID;
+
+                    if (_SubscriptionPeriod.Save())
                     {
-                       _SubscriptionPeriod.MemberID =_Member.MemberID;
-                       _SubscriptionPeriod.PaymentID =_Payment.PaymentID;
 
-                        if (_SubscriptionPeriod.Save()){
-
-                           MessageBox.Show("SubscriptionPeriod Saved Successfully");
-
-                        }
-                        else
-                        {
-                            MessageBox.Show("SubscriptionPeriod failed to Save");
-
-                        }
+                        MessageBox.Show("SubscriptionPeriod Saved Successfully");
 
                     }
-
-
-
-                    return;
+                    else
+                    {
+                        MessageBox.Show("SubscriptionPeriod failed to Save");
+                    }
                 }
              
 
@@ -154,6 +163,25 @@ namespace KaratePresentationLayer
 
         }
 
+        private void _FillPaymentDataIfExist()
+        {
+            if (decimal.TryParse(txtAmount.Text, out decimal Amount))
+            {
+                if (_Payment == null)
+                {
+                    _Payment = new clsPayment();
+                }
+                _Payment.Amount = Amount;
+                _Payment.Date = dateTimePicker.Value;
+                _Payment.MemberID = _Member.MemberID;
+
+                if (_Payment.Save())
+                {
+                    _SubscriptionPeriod.PaymentID = _Payment.PaymentID;
+                }
+
+            }
+        }
 
         private void btnClose_Click(object sender, EventArgs e)
         {

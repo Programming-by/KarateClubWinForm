@@ -80,7 +80,6 @@ namespace KaratePresentationLayer
            
             _Person = clsPeople.Find(Convert.ToInt32(txtPersonID.Text));
 
-            lblIsFound.Text = "Found";
 
             _Member = clsMember.Find(Convert.ToInt32(txtPersonID.Text));
 
@@ -94,6 +93,7 @@ namespace KaratePresentationLayer
 
             }
 
+            lblIsFound.Text = "Found";
 
             lblMode.Text = "Edit Member ID = " + Convert.ToInt32(txtPersonID.Text);
 
@@ -102,9 +102,6 @@ namespace KaratePresentationLayer
             txtAddress.Text = _Person.Address;
             txtEmergencyContactInfo.Text = _Member.EmergencyContactInfo;
             numericLastBeltRank.Value = _Member.LastBeltRank;
-
-            EnableFormData();
-
             if (_Member.IsActive == true)
             {
                 rbActive.Checked = true;
@@ -114,6 +111,7 @@ namespace KaratePresentationLayer
             {
                 rbNotActive.Checked = true;
             }
+            EnableFormData();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -131,7 +129,6 @@ namespace KaratePresentationLayer
             if (rbActive.Checked == true)
             {
                 _Member.IsActive = true;
-
             }
             else
             {
@@ -147,14 +144,11 @@ namespace KaratePresentationLayer
                 {
 
                     MessageBox.Show("Member Saved Successfully");
-
-                    
                     return;
                 }
                 else
                 {
                     MessageBox.Show("Member failed to Save");
-
                 }
 
             }

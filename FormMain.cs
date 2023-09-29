@@ -17,32 +17,34 @@ namespace KaratePresentationLayer
         public FormMain()
         {
             InitializeComponent();
-
-
         }
-        
-        
-        // Belt Test Update
-        // Check if you can make user control to shorten forms
-
         private void _LoadMembersData()
         {
             dgvAllData.DataSource = clsMember.GetAllMembers();
+
+            dgvAllData.ContextMenuStrip = contextMenuStripForMembers;
+
         }
 
         private void _LoadInstructorsData()
         {
             dgvAllData.DataSource = clsInstructor.GetAllInstructors();
+            dgvAllData.ContextMenuStrip = contextMenuStripForInstructors;
+
         }
 
         private void _LoadPaymentsData()
         {
             dgvAllData.DataSource = clsPayment.GetAllPayments();
+            dgvAllData.ContextMenuStrip = contextMenuStripForPayments;
+
         }
 
         private void _LoadSubscriptionPeriodssData()
         {
-            dgvAllData.DataSource = clsSubscriptionPeriod.GetAllSubscriptionPeriods(); 
+            dgvAllData.DataSource = clsSubscriptionPeriod.GetAllSubscriptionPeriods();
+            dgvAllData.ContextMenuStrip = contextMenuStripForSubscriptionPeriods;
+
         }
 
         private void _LoadBeltRanksData()
@@ -53,23 +55,18 @@ namespace KaratePresentationLayer
         private void _LoadBeltTestsData()
         {
             dgvAllData.DataSource = clsBeltTest.GetAllBeltTests();
+            dgvAllData.ContextMenuStrip = contextMenuStripForBeltTests;
+
         }
 
         private void btnGetAllMembers_Click(object sender, EventArgs e)
         {
             _LoadMembersData();
-
-            dgvAllData.ContextMenuStrip = contextMenuStripForMembers;
-
         }
 
         private void btnGetAllInstructors_Click(object sender, EventArgs e)
         {
             _LoadInstructorsData();
-
-            dgvAllData.ContextMenuStrip = contextMenuStripForInstructors;
-
-
         }
 
         private void btnGetAllBeltRanks_Click(object sender, EventArgs e)
@@ -80,24 +77,17 @@ namespace KaratePresentationLayer
         private void btnGetAllPayments_Click(object sender, EventArgs e)
         {
             _LoadPaymentsData();
-
-            dgvAllData.ContextMenuStrip = contextMenuStripForPayments;
-
-
         }
 
         private void btnGetAllSupscriptionPeriods_Click(object sender, EventArgs e)
         {
             _LoadSubscriptionPeriodssData();
 
-            dgvAllData.ContextMenuStrip = contextMenuStripForSubscriptionPeriods;
         }
       
         private void btnGetAllBeltTests_Click(object sender, EventArgs e)
         {
             _LoadBeltTestsData();
-
-           dgvAllData.ContextMenuStrip = contextMenuStripForBeltTests;
         }
 
         private void btnFindMember_Click(object sender, EventArgs e)
@@ -237,9 +227,12 @@ namespace KaratePresentationLayer
                 deleteStripMenuItemForSubscriptionPeriods_Click(sender, e);
                 if (clsMember.Delete((int)dgvAllData.CurrentRow.Cells[0].Value))
                 {
-                    MessageBox.Show("Member Deleted Successfully.");
+                    if (clsPeople.Delete((int)dgvAllData.CurrentRow.Cells[0].Value))
+                    {
+                        MessageBox.Show("Member Deleted Successfully.");
                     _LoadMembersData();
 
+                    }
                 }
             }
         }
@@ -292,7 +285,7 @@ namespace KaratePresentationLayer
         {
             clsMember _Member = clsMember.Find((int)dgvAllData.CurrentRow.Cells[0].Value);
 
-                 if (_Member == null)
+            if (_Member == null)
             {
                 MessageBox.Show("No Member found");
                 this.Close();

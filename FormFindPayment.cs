@@ -52,20 +52,15 @@ namespace KaratePresentationLayer
                 ChangeVisibility(false);
 
                 return;
-            } else
-            {
-
+            } 
+           
             clsPayment Payment = clsPayment.Find(Convert.ToInt32(Member.MemberID));
             if ( Payment == null)
             {
-
                 MessageBox.Show("this ID [" + txtID.Text + "] is not Found");
                 ChangeVisibility(false);
                 return;
-
             }
-            else
-            {
                 lblNameText.Text = Person.Name;
                 lblAddressText.Text = Person.Address;
                 lblContactInfoText.Text = Person.ContactInfo;
@@ -76,12 +71,6 @@ namespace KaratePresentationLayer
                 lblDateText.Text = Payment.Date.ToString();
 
                 ChangeVisibility(true);
-
-            }
-
-            }
-
-
         }
 
     }

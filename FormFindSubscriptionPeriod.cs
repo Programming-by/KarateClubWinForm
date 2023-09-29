@@ -57,31 +57,31 @@ namespace KaratePresentationLayer
 
             if (Person == null || Member == null || SubscriptionPeriod == null)
             {
-
                 MessageBox.Show("this ID [" + txtID.Text + "] is not Found");
                 ChangeVisibility(false);
                 return;
-
             }
-            else
-            {
+            lblNameText.Text = Person.Name;
+            lblContactInfoText.Text = Person.ContactInfo;
+            lblAddressText.Text = Person.Address;
+            lblEmergencyContactInfoText.Text = Member.EmergencyContactInfo;
+            lblLastBeltRankText.Text = Member.LastBeltRank.ToString();
+            lblIsActiveText.Text = Member.IsActive.ToString();
+            lblStartDateText.Text = SubscriptionPeriod.StartDate.ToString();
+            lblEndDateText.Text = SubscriptionPeriod.EndDate.ToString();
+            lblFeesText.Text = SubscriptionPeriod.Fees.ToString();
+
             clsPayment Payment = clsPayment.Find(Convert.ToInt32(Member.MemberID));
 
-                lblNameText.Text = Person.Name;
-                lblContactInfoText.Text = Person.ContactInfo;
-                lblAddressText.Text = Person.Address;
-                lblEmergencyContactInfoText.Text = Member.EmergencyContactInfo;
-                lblLastBeltRankText.Text = Member.LastBeltRank.ToString();
-                lblIsActiveText.Text = Member.IsActive.ToString();
-                lblStartDateText.Text = SubscriptionPeriod.StartDate.ToString();
-                lblEndDateText.Text = SubscriptionPeriod.EndDate.ToString();
-                lblFeesText.Text = SubscriptionPeriod.Fees.ToString();
+            if (Payment != null)
+            {
                 lblAmountText.Text = Payment.Amount.ToString();
                 lblDateText.Text = Payment.Date.ToString();
-
-                ChangeVisibility(true);
-
+            } else
+            {
+                MessageBox.Show("There is no payment");
             }
+                ChangeVisibility(true);
 
 
         }

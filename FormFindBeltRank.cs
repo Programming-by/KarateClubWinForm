@@ -43,17 +43,11 @@ namespace KaratePresentationLayer
                 return;
 
             }
-            else
-            {
 
                 lblRankNameText.Text = BeltRank.RankName;
                 lblTestFeesText.Text = BeltRank.TestFees.ToString();
 
                 ChangeVisibility(true);
-
-            }
-
-
         }
 
     }

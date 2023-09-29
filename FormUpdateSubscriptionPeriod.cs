@@ -125,7 +125,6 @@ namespace KaratePresentationLayer
             if (_Member.IsActive == true)
             {
                 rbActive.Checked = true;
-
             }
             else
             {
@@ -135,8 +134,23 @@ namespace KaratePresentationLayer
             StartdateTimePicker.Value = _SubscriptionPeriod.StartDate;
             EnddateTimePicker.Value = _SubscriptionPeriod.EndDate;
             txtFees.Text = _SubscriptionPeriod.Fees.ToString();
-       
+
+            clsPayment Payment = clsPayment.Find(_Member.MemberID);
+
             EnableFormData();
+            if (Payment != null)
+            {
+                txtAmount.Text = Payment.Amount.ToString();
+                dateTimePicker1.Value = Payment.Date;
+                EnableFormData();
+
+            }
+            else
+            {
+                return;
+            }
+
+       
 
 
         }

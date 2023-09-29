@@ -69,8 +69,6 @@ namespace KaratePresentationLayer
 
             _Person = clsPeople.Find(Convert.ToInt32(txtPersonID.Text));
 
-            lblIsFound.Text = "Found";
-
             _Instructor = clsInstructor.Find(Convert.ToInt32(txtPersonID.Text));
 
             if (_Person == null || _Instructor == null)
@@ -83,6 +81,7 @@ namespace KaratePresentationLayer
 
             }
 
+            lblIsFound.Text = "Found";
 
             lblMode.Text = "Edit Instructor ID = " + Convert.ToInt32(txtPersonID.Text);
 
@@ -134,6 +133,11 @@ namespace KaratePresentationLayer
         {
             _LoadData();
 
+        }
+
+        private void FormUpdateInstructor_Load(object sender, EventArgs e)
+        {
+            DisableFormData();
         }
     }
 }

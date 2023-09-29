@@ -97,12 +97,9 @@ namespace KaratePresentationLayer
 
                     return;
                 }
-                else
-                {
-                    MessageBox.Show("Instructor failed to Save");
-
-                }
-
+            } else
+            {
+                MessageBox.Show("Person failed to Save");
             }
         }
 

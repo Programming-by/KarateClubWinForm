@@ -49,8 +49,6 @@ namespace KaratePresentationLayer
         {
             if (MessageBox.Show("Are you sure you want to delete Member  [" + txtPersonID.Text + "]", "Confirm Delete", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
-
-
                 if (clsSubscriptionPeriod.Delete(Convert.ToInt32(_Member.MemberID)))
                 {
                     MessageBox.Show("Period Deleted Successfully.");
@@ -61,15 +59,13 @@ namespace KaratePresentationLayer
                     MessageBox.Show("Payment Deleted Successfully.");
                 }
 
-
-
                 if (clsMember.Delete(Convert.ToInt32(txtPersonID.Text)))
                 {
+                    if (clsPeople.Delete(Convert.ToInt32(txtPersonID.Text)))
+                    {
                     MessageBox.Show("Member Deleted Successfully.");
+                    }
                 }
-
-
-
 
             }
         }

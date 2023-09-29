@@ -109,15 +109,13 @@ namespace KaratePresentationLayer
 
                         return;
                     }
-                    else
-                    {
-                        MessageBox.Show("Member failed to Save");
-
-                    }
+                } else {
+                
+                MessageBox.Show("Person failed to Save");
 
                 }
 
-            }
+        }
 
         private void FormAddEditMembers_Load(object sender, EventArgs e)
         {

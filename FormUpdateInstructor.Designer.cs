@@ -229,6 +229,7 @@
             this.Controls.Add(this.lblMode);
             this.Name = "FormUpdateInstructor";
             this.Text = "UpdateInstructor";
+            this.Load += new System.EventHandler(this.FormUpdateInstructor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

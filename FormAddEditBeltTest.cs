@@ -117,6 +117,7 @@ namespace KaratePresentationLayer
                 dateTimePicker.Value = _Payment.Date;
             } else
             {
+                MessageBox.Show("There is no Payment Found");
                 return;
             }
 
@@ -143,7 +144,6 @@ namespace KaratePresentationLayer
 
             _Instructor.Qualifications = txtQualifications.Text;
 
-            _Payment.Amount = Convert.ToDecimal(txtAmount.Text);
 
             _Payment.Date = dateTimePicker.Value;
 
@@ -165,19 +165,15 @@ namespace KaratePresentationLayer
             if (_Person.Save())
             {
                 _Member.PersonID = _Person.PersonID;
-                _Instructor.PersonID = _Person.PersonID;
 
-                if (_Member.Save() && _Instructor.Save())
+                if (_Member.Save())
                 {
                     _Payment.MemberID = _Member.MemberID;
 
-                    if (_Payment.Save())
-                    {
-                        _BeltTest.PaymentID = _Payment.PaymentID;
-                    }
+                    _FillPaymentDataIfExist();
+
+
                     _BeltTest.MemberID = _Member.MemberID;
-                    _BeltTest.TestedByInstructorID = _Instructor.InstructorID;
-                   // _BeltTest.TestedByInstructorID = Convert.ToInt32(null);
 
                     if (_BeltTest.Save())
                     {
@@ -194,6 +190,28 @@ namespace KaratePresentationLayer
 
 
 
+        }
+
+
+        private void _FillPaymentDataIfExist()
+        {
+            if (decimal.TryParse(txtAmount.Text, out decimal Amount))
+            {
+                if (_Payment == null)
+                {
+                    _Payment = new clsPayment();
+                }
+                _Payment.Amount = Amount;
+                _Payment.Date = dateTimePicker.Value;
+                _Payment.MemberID = _Member.MemberID;
+
+                if (_Payment.Save())
+                {
+                    _BeltTest.PaymentID = _Payment.PaymentID;
+
+                }
+
+            }
         }
 
 

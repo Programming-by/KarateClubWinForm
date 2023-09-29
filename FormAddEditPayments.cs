@@ -126,15 +126,12 @@ namespace KaratePresentationLayer
                     MessageBox.Show("Payment Saved Successfully");
 
                     }
-
-                    return;
                 }
-                else
-                {
-                    MessageBox.Show("Payment failed to Save");
+               
 
-                }
-
+            } else
+            {
+                MessageBox.Show("Person failed to Save");
             }
         }
 

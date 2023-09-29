@@ -53,8 +53,6 @@ namespace KaratePresentationLayer
                 return;
 
             }
-            else
-            {
 
                 lblNameText.Text = Person.Name;
                 lblContactInfoText.Text = Person.ContactInfo;
@@ -64,9 +62,6 @@ namespace KaratePresentationLayer
                 lblIsActiveText.Text = Member.IsActive.ToString();
 
                 ChangeVisibility(true);
-
-            }
-
 
         }
 

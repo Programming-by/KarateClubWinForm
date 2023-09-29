@@ -58,21 +58,15 @@ namespace KaratePresentationLayer
         {
             clsPeople Person = clsPeople.Find(Convert.ToInt32(txtID.Text));
             clsMember Member = clsMember.Find(Convert.ToInt32(txtID.Text));
-            clsInstructor Instructor = clsInstructor.Find(Convert.ToInt32(txtID.Text));
             clsBeltTest BeltTest = clsBeltTest.Find(Convert.ToInt32(txtID.Text));
 
-            if (Person == null || Member == null || Instructor == null || BeltTest == null)
+            if (Person == null || Member == null  || BeltTest == null)
             {
-
                 MessageBox.Show("this ID [" + txtID.Text + "] is not Found");
                 ChangeVisibility(false);
                 return;
-
             }
-            else
-            {
-
-
+   
                 clsBeltRank BeltRank = clsBeltRank.Find(BeltTest.RankID);
 
                 lblNameText.Text = Person.Name;
@@ -83,26 +77,17 @@ namespace KaratePresentationLayer
                 lblIsActiveText.Text = Member.IsActive.ToString();
                 lblRankNameText.Text = BeltRank.RankName;
                 lblTestFeesText.Text = BeltRank.TestFees.ToString();
-                lblQualificationsText.Text = Instructor.Qualifications;
                 clsPayment Payment = clsPayment.Find(Member.MemberID);
-                ChangeVisibility(true);
                 if (Payment != null)
                 {
-                lblAmountText.Text = Payment.Amount.ToString();
-                lblDateText.Text = Payment.Date.ToString();
-                    ChangeVisibility(true);
-
+                 lblAmountText.Text = Payment.Amount.ToString();
+                 lblDateText.Text = Payment.Date.ToString();
                 }
                 else
                 {
-                    return;
+                MessageBox.Show("There is no payment");
                 }
-
-
-
-            }
-
-
+                    ChangeVisibility(true);
         }
 
     }

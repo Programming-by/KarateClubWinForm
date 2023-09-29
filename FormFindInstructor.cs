@@ -49,8 +49,6 @@ namespace KaratePresentationLayer
                 return;
 
             }
-            else
-            {
 
                 lblNameText.Text = Person.Name;
                 lblContactInfoText.Text = Person.ContactInfo;
@@ -58,9 +56,6 @@ namespace KaratePresentationLayer
                 lblQualificationsText.Text = Instructor.Qualifications;
 
                 ChangeVisibility(true);
-
-            }
-
 
         }
 
