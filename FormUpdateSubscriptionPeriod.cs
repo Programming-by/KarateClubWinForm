@@ -66,8 +66,8 @@ namespace KaratePresentationLayer
             lblStartDate.Visible = true;
             lblEndDate.Visible = true;
             lblFees.Visible = true;
-           // lblAmount.Visible = true;
-            //lblDate.Visible = true;
+            lblAmount.Visible = true;
+            lblDate.Visible = true;
 
             txtName.Visible = true;
             txtAddress.Visible = true;
@@ -82,8 +82,8 @@ namespace KaratePresentationLayer
             StartdateTimePicker.Visible = true;
             EnddateTimePicker.Visible = true;
             txtFees.Visible = true;
-            //txtAmount.Visible = true;
-            //dateTimePicker1.Visible = true;
+            txtAmount.Visible = true;
+            dateTimePicker1.Visible = true;
             btnClose.Visible = true;
             btnSave.Visible = true;
 
@@ -113,7 +113,7 @@ namespace KaratePresentationLayer
 
             lblIsFound.Text = "Found";
 
-            lblMode.Text = "Edit SubscriptionPeriod ID = " + Convert.ToInt32(_Member.MemberID);
+            lblMode.Text = "Edit SubscriptionPeriod ID = " +  _Member.MemberID;
 
             txtName.Text = _Person.Name;
             txtContactInfo.Text = _Person.ContactInfo;
@@ -142,12 +142,11 @@ namespace KaratePresentationLayer
             {
                 txtAmount.Text = Payment.Amount.ToString();
                 dateTimePicker1.Value = Payment.Date;
-                EnableFormData();
 
             }
             else
             {
-                return;
+                txtAmount.Text = "";
             }
 
        
@@ -179,19 +178,26 @@ namespace KaratePresentationLayer
             _SubscriptionPeriod.StartDate = StartdateTimePicker.Value;
             _SubscriptionPeriod.EndDate = EnddateTimePicker.Value;
             _SubscriptionPeriod.Fees = Convert.ToDecimal(txtFees.Text);
-            //_Payment.Amount = Convert.ToDecimal(txtAmount.Text);
-            //_Payment.Date = Convert.ToDateTime(dateTimePicker1.Value);
 
+            if (decimal.TryParse(txtAmount.Text,out decimal Amount))
+            {
+                _Payment = clsPayment.Find(_Member.MemberID);
 
+                if (_Payment != null)
+                {
+                    _Payment.Amount = Amount;
+                    _Payment.Date = Convert.ToDateTime(dateTimePicker1.Value);
 
+                    if (_Payment.Save())
+                    {
+                        MessageBox.Show("Payment Saved Successfully");
+                    }
+                }
+            }
                     if (_Person.Save() && _Member.Save() && _SubscriptionPeriod.Save())
                     {
-
                         MessageBox.Show("SubscriptionPeriod Saved Successfully");
-
-
                     }
-
         
         }
 

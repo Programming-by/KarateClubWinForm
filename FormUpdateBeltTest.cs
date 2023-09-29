@@ -72,8 +72,6 @@ namespace KaratePresentationLayer
             _Member = clsMember.Find(Convert.ToInt32(txtPersonID.Text));
           //  _Instructor = clsInstructor.Find(Convert.ToInt32(txtPersonID.Text));
             _BeltTest = clsBeltTest.Find(Convert.ToInt32(txtPersonID.Text));
-
-
             if (_Person == null || _Member == null)
             {
                 MessageBox.Show("this form will be closed because No Person  with ID  = " + txtPersonID.Text);
@@ -83,13 +81,11 @@ namespace KaratePresentationLayer
                 return;
             }
 
-            if (  _BeltTest == null)
+            if ( _BeltTest == null)
             {
                 MessageBox.Show("this form will be closed because No Belt Test with ID  = " + txtPersonID.Text);
 
                 ChangeVisibility(false);
-
-
                 this.Close();
 
                 return;
@@ -125,7 +121,7 @@ namespace KaratePresentationLayer
                 rbNoResult.Checked = true;
             }
 
-            BeltTestdateTimePicker.Value = _BeltTest.Date;
+            BeltTestdateTimePicker.Value = _BeltTest.Date ;
 
 
 
@@ -144,7 +140,7 @@ namespace KaratePresentationLayer
             ChangeVisibility(true);
         }
 
-       
+
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -166,11 +162,7 @@ namespace KaratePresentationLayer
                 _Member.IsActive = false;
             }
 
-           // _Instructor.Qualifications = txtQualifications.Text;
-
-            _Payment.Amount = Convert.ToDecimal(txtAmount.Text);
-
-            _Payment.Date = dateTimePicker.Value;
+            // _Instructor.Qualifications = txtQualifications.Text;
 
             _BeltTest.RankID = Convert.ToInt32(numericBeltRank.Value);
 
@@ -186,6 +178,21 @@ namespace KaratePresentationLayer
 
             _BeltTest.Date = BeltTestdateTimePicker.Value;
 
+            if (decimal.TryParse(txtAmount.Text, out decimal Amount)) { 
+
+                if (_Payment != null)
+                {
+
+                    _Payment.Amount = Amount;
+
+                    _Payment.Date = dateTimePicker.Value;
+                    if (_Payment.Save())
+                    {
+                        _BeltTest.PaymentID = _Payment.PaymentID;
+                    }
+
+                }
+        }
 
             if (_Person.Save())
             {
@@ -196,23 +203,13 @@ namespace KaratePresentationLayer
                 {
                     _Payment.MemberID = _Member.MemberID;
 
-                    if (_Payment.Save())
-                    {
-                        _BeltTest.PaymentID = _Payment.PaymentID;
-                    }
                     _BeltTest.MemberID = _Member.MemberID;
                    // _BeltTest.TestedByInstructorID = _Instructor.InstructorID;
-                    // _BeltTest.TestedByInstructorID = Convert.ToInt32(null);
-
                     if (_BeltTest.Save())
                     {
                         MessageBox.Show("Belt Test saved Successfully");
                     }
-                    else
-                    {
-                        MessageBox.Show("Belt Test Failed to save");
-
-                    }
+                
                 }
             }
 

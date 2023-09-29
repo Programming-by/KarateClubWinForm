@@ -402,9 +402,9 @@
             this.lblMode.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMode.Location = new System.Drawing.Point(471, 25);
             this.lblMode.Name = "lblMode";
-            this.lblMode.Size = new System.Drawing.Size(350, 46);
+            this.lblMode.Size = new System.Drawing.Size(316, 46);
             this.lblMode.TabIndex = 83;
-            this.lblMode.Text = "Add New Belt Test";
+            this.lblMode.Text = "Update Belt Test";
             // 
             // btnFind
             // 

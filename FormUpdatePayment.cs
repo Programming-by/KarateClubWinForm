@@ -110,7 +110,7 @@ namespace KaratePresentationLayer
 
             lblIsFound.Text = "Found";
 
-            lblMode.Text = "Edit Payment ID = " + Convert.ToInt32(_Member.MemberID);
+            lblMode.Text = "Edit Payment ID = " + _Member.MemberID;
 
             txtName.Text = _Person.Name;
             txtContactInfo.Text = _Person.ContactInfo;
@@ -166,26 +166,14 @@ namespace KaratePresentationLayer
                     {
 
                     MessageBox.Show("Payment Saved Successfully");
-                    
-                    
+
                     } 
-
-
-
-
-                }
-                else
-                {
-                    MessageBox.Show("Member failed to Save");
-
                 }
 
-            }
-            else
-            {
+            } else
+             {
                 MessageBox.Show("Person failed to Save");
-
-            }
+             }
         }
 
         private void btnFind_Click(object sender, EventArgs e)

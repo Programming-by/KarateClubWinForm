@@ -95,7 +95,7 @@ namespace KaratePresentationLayer
 
             lblIsFound.Text = "Found";
 
-            lblMode.Text = "Edit Member ID = " + Convert.ToInt32(txtPersonID.Text);
+            lblMode.Text = "Edit Member ID = " + txtPersonID.Text;
 
             txtName.Text = _Person.Name;
             txtContactInfo.Text = _Person.ContactInfo;
@@ -146,11 +146,11 @@ namespace KaratePresentationLayer
                     MessageBox.Show("Member Saved Successfully");
                     return;
                 }
-                else
-                {
-                    MessageBox.Show("Member failed to Save");
-                }
 
+            }
+            else
+            {
+                MessageBox.Show("Person failed to Save");
             }
         }
 
